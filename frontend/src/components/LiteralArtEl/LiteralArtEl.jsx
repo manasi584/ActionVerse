@@ -1,4 +1,4 @@
-import { FaHeart, FaShareAlt } from "react-icons/fa";
+import { FaHeart, FaShareAlt, FaTimes } from "react-icons/fa";
 import { useLiteral } from "../../Context/LiteralContext";
 import "./LiteralArtEl.css";
 import { CiHeart } from "react-icons/ci";
@@ -7,9 +7,10 @@ import { useState } from "react";
 
 export default function LiteralArtEl() {
   const { currLiteral, isLoading } = useLiteral();
-  const { author, content, imageUrl, title } = currLiteral;
+  const { author, content, imageUrl, title, comments } = currLiteral;
   const [isHeartClicked, setIsHeartClicked] = useState(false);
 
+  const [showComments, setShowComments] = useState(false);
   if (isLoading) {
     return <div className="LiteralArtElement-Loading">Loading...</div>;
   }
@@ -40,9 +41,31 @@ export default function LiteralArtEl() {
           <CiHeart onClick={() => setIsHeartClicked(true)} />
         )}
 
-        <LiaComments />
+        <LiaComments
+          onClick={() => setShowComments(true)}
+          fill={showComments ? "black" : "white"}
+        />
         <FaShareAlt />
       </div>
+      {showComments && (
+        <div className="LiteralArtElementComments">
+          <div className="CommentHeader">
+            <span>Comments</span>
+            <FaTimes onClick={() => setShowComments(false)} fill="red" />
+          </div>
+          {comments.length > 0 ? (
+            <ul className="CommentList">
+              {comments.map((comment) => (
+                <li key={comment.id}>
+                  <b>{comment.author}:</b> {comment.text}
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="NoComments">No comments yet.</p>
+          )}
+        </div>
+      )}
     </div>
   );
 }

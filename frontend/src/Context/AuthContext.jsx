@@ -1,75 +1,74 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from "firebase/auth";
+import { auth } from "../firebaseConfig"; 
 
-//  create context
+// Create authentication context
 const AuthContext = createContext();
 
-const FAKE_USER = {
-  name: "user1",
-  email: "user1@test.com",
-  password: "123456",
-  avatar: "https://i.pravatar.cc/100?",
-};
-
-const initialState = {
-  user: null,
-  isAuthenticated: false,
-};
-function reducer(state, action) {
-  switch (action.type) {
-    case "login":
-      return {
-        ...state,
-        user: action.payload,
-        isAuthenticated: true,
-      };
-    case "signup":
-      return {
-        ...state,
-        user: action.payload,
-        isAuthenticated: true,
-      };
-    case "logout":
-      return {
-        ...state,
-        user: action.payload,
-        isAuthenticated: false,
-      };
-    default:
-      throw new Error("Unknown action");
-  }
-}
-
 function AuthProvider({ children }) {
-  const [{ user, isAuthenticated }, dispatch] = useReducer(
-    reducer,
-    initialState
-  );
+  const [user, setUser] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [loading, setLoading] = useState(true); // To prevent flashing effect
 
-  function login(email, password) {
-    if (email === FAKE_USER.email && password === FAKE_USER.password) {
-      console.log(isAuthenticated);
-      dispatch({ type: "login", payload: FAKE_USER });
+  // Listen to Firebase auth state changes
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      setIsAuthenticated(!!currentUser);
+      setLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  // Firebase login function
+  async function login(email, password) {
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+    } catch (error) {
+      console.error("Login Error:", error.message);
+      throw error;
     }
   }
-  function signup(email, password, name) {
-    const nwwuser = { name: name, email: email, password: password };
-    dispatch({ type: "signup", payload: nwwuser });
+
+  // Firebase signup function
+  async function signup(email, password) {
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+    } catch (error) {
+      console.error("Signup Error:", error.message);
+      throw error;
+    }
   }
-  function logout() {
-    dispatch({ type: "logout" });
+
+  // Firebase logout function
+  async function logout() {
+    try {
+      await signOut(auth);
+      setUser(null);
+      setIsAuthenticated(false);
+    } catch (error) {
+      console.error("Logout Error:", error.message);
+    }
   }
+
   return (
-    <AuthContext.Provider
-      value={{ isAuthenticated, user, login, logout, signup }}
-    >
-      {children}
+    <AuthContext.Provider value={{ isAuthenticated, user, login, logout, signup }}>
+      {!loading && children} {/* Prevent rendering until auth state is known */}
     </AuthContext.Provider>
   );
 }
+
+// Custom hook to use AuthContext
 function useAuth() {
   const context = useContext(AuthContext);
   if (context === undefined) {
-    throw new Error("AuthContext was used outside AuthProvider");
+    throw new Error("useAuth must be used within an AuthProvider");
   }
   return context;
 }

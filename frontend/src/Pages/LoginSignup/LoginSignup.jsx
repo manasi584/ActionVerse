@@ -23,24 +23,24 @@ export default function LoginSignup() {
                   onClick={toggleMode}
                   className="LoginSignupToggle BlueHighlight"
                 >
-                  Sign Up
+                  <b className="signup-option">Sign Up</b>
                 </span>
               </p>
             </>
           ) : (
             <>
-              <h1 className="LoginSignupContainerHeading">SignUp</h1>
-              <Signup />
-              <p className="LoginSignupContainerMessage">
-                Already have an account?{" "}
-                <span
-                  onClick={toggleMode}
-                  className="LoginSignupToggle Highlight"
-                >
-                  Login{" "}
-                </span>
-              </p>
-            </>
+            <h1 className="LoginSignupContainerHeading">SignUp</h1>
+            <Signup />
+            <p className="LoginSignupContainerMessage">
+              Already have an account?{" "}
+              <span
+                onClick={toggleMode}
+                className="LoginSignupToggle Highlight"
+              >
+                <b className="login-option">Login</b>
+              </span>
+            </p>
+          </>
           )}
         </div>
       </div>

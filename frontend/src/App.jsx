@@ -7,12 +7,13 @@ import { lazy } from "react";
 import LiteralArtElement from "./Pages/LiteralArtElement/LiteralArtElement.jsx";
 import { LiteralProvider } from "./Context/LiteralContext.jsx";
 import VisualArt from "./Pages/VisulalArt/VisualArt.jsx";
-import CrowdfundingPage from "./Pages/Crowdfunding/crowdfundingPage.jsx";
+import CrowdfundingPage from "./Pages/Crowdfunding/CrowdfundingPage.jsx";
 import Livestream from "./Pages/Livestream/Livestream.jsx";
 import PerformingArtsFeed from "./Pages/PerformingArt/PerformingArtsFeed.jsx";
 import UserProfile from "./Pages/Profile/UserProfile.jsx";
 import LivestreamStart from "./Pages/StartLive/LivestreamStart.jsx"
 import GeoMap from "./Pages/GeoMap/GeoMap.jsx"
+import DigitalMedia from "./Pages/DigitalMedia/DigitalMedia.jsx";
 
 
 const Home = lazy(() => import("./Pages/Home/Home.jsx"));
@@ -36,6 +37,7 @@ function App() {
             <Route path="/profile" element={<UserProfile/>} />
             <Route path="/start-live" element={<LivestreamStart></LivestreamStart>} />
             <Route path="/map" element={<GeoMap/>} />
+            <Route path="/digital-media" element={<DigitalMedia/>} />
             {/* <Route
             path="app"
             element={

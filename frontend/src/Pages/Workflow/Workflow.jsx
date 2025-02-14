@@ -1,6 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 import hustleImg from "/hustle.jpg"; 
-import { checklistItems } from "../../Context/index";
+import { checklistItems } from "../../data/index";
 import "./Workflow.css";
 
 const Workflow = () => {

@@ -4,20 +4,8 @@ import "./HeroSection.css";
 const HeroSection = () => {
   return (
     <div className="hero">
-      {/* Background Video Section */}
-      <div className="hero-video-container">
-        <video 
-          autoPlay 
-          loop 
-          muted 
-          className="hero-video"
-        >
-          <source src={video1} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
 
-      {/* Content Below Video */}
+      {/* Content before Video */}
       <div className="hero-content">
         <h1 className="hero-title">
           Empowering Youth{" "}
@@ -32,6 +20,22 @@ const HeroSection = () => {
           <a href="#" className="hero-docs">Learn More</a>
         </div>
       </div>
+
+
+
+      {/* Background Video Section */}
+      <div className="hero-video-container">
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          className="hero-video"
+        >
+          <source src={video1} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+
     </div>
   );
 };

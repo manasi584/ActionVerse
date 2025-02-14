@@ -1,5 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
-import { pricingOptions } from "../../Context/index";
+import { pricingOptions } from "../../data/index";
 import "./Pricing.css"; 
 
 const Pricing = () => {

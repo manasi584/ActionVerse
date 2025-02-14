@@ -43,9 +43,10 @@
   }
   
   
-  /* Content Section Below Video */
+  /* Content Section above Video */
   .hero-content {
     margin-top: 20px;
+    margin-bottom: 50px;
     width: 90%;
     max-width: 800px;
   }

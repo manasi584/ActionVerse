@@ -10,16 +10,17 @@ export default function Signup() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [message, setMessage] = useState("");
   const { signup, isAuthenticated } = useAuth();
-
   const navigate = useNavigate();
+
   useEffect(() => {
     if (isAuthenticated) {
       navigate("/", { replace: true });
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated, navigate]);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    setMessage(""); // Clear previous messages
 
     // Basic input validation
     if (!name || !email || !password || !confirmPassword) {
@@ -31,9 +32,13 @@ export default function Signup() {
       setMessage("Passwords do not match.");
       return;
     }
-    console.log("Registration successful!");
-    signup(email, password, name);
-    if (!isAuthenticated) setMessage("Invalid credentials. Please try again");
+
+    try {
+      await signup(email, password, name);
+      navigate("/"); // Redirect after successful signup
+    } catch (error) {
+      setMessage(error.message); // Display Firebase error message
+    }
   };
 
   return (
@@ -57,7 +62,7 @@ export default function Signup() {
           Email:
         </label>
         <input
-          type="text"
+          type="email"
           id="email"
           placeholder="Enter email"
           value={email}
@@ -71,7 +76,7 @@ export default function Signup() {
           Password:
         </label>
         <input
-          type="text"
+          type="password"
           id="password"
           placeholder="Enter password"
           className="loginFormInput"
@@ -85,7 +90,7 @@ export default function Signup() {
           Confirm Password:
         </label>
         <input
-          type="text"
+          type="password"
           id="confirmPassword"
           placeholder="Confirm password"
           className="loginFormInput"
@@ -94,11 +99,12 @@ export default function Signup() {
           required
         />
       </div>
-
-      <button type="submit" className="loginFormButton">
-        Create account
-      </button>
-      <p>{message}</p>
+      <div className="loginFormButtonContainer">
+        <button type="submit" className="loginFormButton">
+          Create account
+        </button>
+      </div>
+      {message && <p className="errorMessage">{message}</p>} {/* Show error message */}
     </form>
   );
 }

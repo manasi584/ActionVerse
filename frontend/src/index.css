@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* Global Styles */
 :root {
@@ -7,13 +7,12 @@
 
   --primary-color: #ff6700; /* Warm Orange */
   --secondary-color: #ff3d00; /* Vibrant Red-Orange */
-  
+
   /* Background: Subtle warm gradient */
-  --background-color: linear-gradient(135deg, #fdf6ec, #ffe6cc); 
+  --background-color: linear-gradient(135deg, #fdf6ec, hwb(31 80% 0%));
 
   --text-color: #222; /* Darker Gray for better contrast */
 }
-
 
 /* Apply background globally */
 body {
@@ -28,8 +27,6 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-
-
 
 /* Container */
 .container {
@@ -71,7 +68,11 @@ body {
 }
 
 .button-primary {
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   color: white;
   border: none;
 }

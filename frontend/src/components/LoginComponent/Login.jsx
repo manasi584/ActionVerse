@@ -14,17 +14,17 @@ export default function Login() {
     if (isAuthenticated) {
       navigate("/", { replace: true });
     }
-  }, [isAuthenticated]);
+  }, [isAuthenticated, navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(isAuthenticated, email, password);
+    setMessage(""); // Clear previous error messages
+
     try {
       await login(email, password);
-      if (!isAuthenticated) setMessage("Invalid credentials. Please try again");
+      navigate("/"); // Redirect to home on successful login
     } catch (error) {
-      console.error("Login failed:", error);
-      alert("Invalid credentials. Please try again.");
+      setMessage(error.message); // Display Firebase error message
     }
   };
 
@@ -38,7 +38,7 @@ export default function Login() {
           <input
             type="email"
             id="email"
-            placeholder="Enter email:"
+            placeholder="Enter email"
             className="loginFormInput"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -59,11 +59,12 @@ export default function Login() {
             required
           />
         </div>
-
-        <button type="submit" className="loginFormButton">
-          Login
-        </button>
-        <p>{message}</p>
+        <div className="loginFormButtonContainer">
+          <button type="submit" className="loginFormButton">
+            Login
+          </button>
+        </div>
+        {message && <p className="errorMessage">{message}</p>} {/* Show error message */}
       </form>
     </>
   );

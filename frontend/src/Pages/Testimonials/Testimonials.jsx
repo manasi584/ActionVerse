@@ -1,4 +1,4 @@
-import { testimonials } from "../../Context/index";
+import { testimonials } from "../../data/index";
 import "./Testimonials.css"; 
 
 const Testimonials = () => {

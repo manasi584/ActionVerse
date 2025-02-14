@@ -1,4 +1,4 @@
-import { resourcesLinks, platformLinks, communityLinks } from "../../Context/index";
+import { resourcesLinks, platformLinks, communityLinks } from "../../data/index";
 import "./Footer.css";
 
 const Footer = () => {

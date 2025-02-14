@@ -1,4 +1,4 @@
-import { visualArtworks } from "../../Context/index";  
+import { visualArtworks } from "../../data/index";  
 import { FaHeart, FaRegBookmark, FaComment } from "react-icons/fa";
 import "./VisualArt.css"; 
 import Topbar from "../../components/Topbar/Topbar";
