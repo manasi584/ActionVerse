@@ -1,0 +1,26 @@
+.loginFormGroup {
+  margin-bottom: 10px;
+}
+
+.loginFormLabel {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.loginFormInput {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+
+  border-radius: 5px;
+}
+
+.loginFormButton {
+  background: linear-gradient(to right, #1fa8c0, rgb(38, 108, 194));
+
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

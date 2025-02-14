@@ -1,0 +1,55 @@
+.Literal_topbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  z-index: 999;
+}
+
+/* ... Rest of your CSS ... */
+
+/* Rest of your CSS remains the same */
+.Literal_topbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.Literal_topbar-logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.Literal_topbar-center {
+  display: flex;
+  align-items: center;
+}
+
+.Literal_topbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Literal_topbar-nav li {
+  margin-right: 1.5rem;
+}
+
+.Literal_topbar-nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.Literal_topbar-nav a:hover {
+  color: #007bff;
+}

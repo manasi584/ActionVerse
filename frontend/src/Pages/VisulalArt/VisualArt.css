@@ -1,0 +1,104 @@
+/* Main Visual Art Page */
+.visualArt {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Title and Subtitle */
+  .pageTitle {
+    font-size: 2rem;
+    color: #333;
+  }
+  
+  .subText {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Art Gallery Grid */
+  .artGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Artist Card */
+  .artCard {
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .artCard:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Artist Profile Section */
+  .artistProfile {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background: #f4f4f4;
+  }
+  
+  .profileImage {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .artistName {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Artwork Image */
+  .artImage {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  /* Art Description */
+  .artInfo {
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Like, Save & Comment Section */
+  .artActions {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .artActions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+    transition: color 0.3s ease;
+  }
+  
+  .artActions button:hover {
+    color: #ff6700; /* Highlight color */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .artGallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

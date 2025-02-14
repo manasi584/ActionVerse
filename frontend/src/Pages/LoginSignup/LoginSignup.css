@@ -1,0 +1,29 @@
+.LoginSignup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 90vh;
+  padding: 20px; /* Adds padding for smaller screens */
+}
+
+.loginSignupContainer {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 10px 2px 5px rgba(144, 168, 153, 0.1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid;
+  border-color: rgb(8, 65, 65);
+  background: linear-gradient(to right, rgb(24, 210, 210), rgb(175, 213, 175));
+  width: 400px; /* Default width */
+  max-width: 90%; /* Prevents overflow on smaller screens */
+}
+
+.LoginSignupContainerHeading {
+  text-align: center;
+  font-size: 1.5rem;
+}
+

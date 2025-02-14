@@ -1,0 +1,72 @@
+/* Footer Container */
+.footer {
+    margin-top: 80px;
+    padding: 50px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Softer border */
+    
+    /* Warm gradient to complement orange buttons */
+    background: linear-gradient(135deg, #ffedd5, #ffe4b5); 
+    
+    color: #222; /* Darker for contrast */
+    text-align: center; /* Centers all text */
+  }
+  
+  /* Footer Grid Layout */
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column layout for better centering */
+    gap: 20px;
+    justify-content: center; /* Centers items */
+  }
+  
+  @media (min-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1200px;
+      margin: 0 auto; /* Center the grid */
+    }
+  }
+  
+  /* Footer Heading */
+  .footer h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #111; /* Darker for strong contrast */
+  }
+  
+  /* Footer List */
+  .footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto; /* Centers lists */
+    display: inline-block; /* Ensures proper alignment */
+    text-align: left; /* Aligns text properly in lists */
+  }
+  
+  /* Footer List Items */
+  .footer ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Footer Links */
+  .footer a {
+    text-decoration: none;
+    color: #444; /* Subtle contrast */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .footer a:hover {
+    color: #ff6700; /* Complementary orange */
+  }
+  
+  /* Responsive Centering */
+  @media (max-width: 768px) {
+    .footer {
+      text-align: center;
+    }
+    .footer-grid {
+      grid-template-columns: 1fr; /* Stack items */
+    }
+  }
+  

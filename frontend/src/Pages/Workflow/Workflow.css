@@ -1,0 +1,122 @@
+/* Workflow Section */
+.workflow-section {
+    margin-top: 80px;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  
+  /* Heading */
+  .workflow-heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  .workflow-subheading {
+    font-size: 1.2rem;
+    color: #ff6700; /* Bright orange for energy */
+    margin-bottom: 40px;
+  }
+  
+  @media (min-width: 640px) {
+    .workflow-heading {
+      font-size: 3.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .workflow-heading {
+      font-size: 4rem;
+    }
+  }
+  
+  /* Container */
+  .workflow-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Image Container */
+  .workflow-image-container {
+    width: 100%;
+    padding: 8px;
+  }
+  
+  @media (min-width: 1024px) {
+    .workflow-image-container {
+      width: 50%;
+    }
+  }
+  
+  .workflow-image-container{
+    display: flex;
+    justify-content: center;
+    margin-left: 60px;
+  }
+  
+  .workflow-image-container img {
+    margin-top: 95px;
+    margin-right: 70px;
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #ff4500; /* Bold border */
+    box-shadow: 0px 0px 10px rgba(255, 69, 0, 0.5);
+  }
+  
+  /* Checklist Container */
+  .workflow-checklist {
+    width: 100%;
+    padding-top: 48px;
+  }
+  
+  @media (min-width: 1024px) {
+    .workflow-checklist {
+      width: 50%;
+    }
+  }
+  
+  /* Checklist Item */
+  .checklist-item {
+    display: flex;
+    margin-bottom: 32px;
+    align-items: center;
+    background: rgba(255, 69, 0, 0.1);
+    padding: 16px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .checklist-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Icon */
+  .checklist-icon {
+    color: #ff6700; /* Bright orange */
+    background-color: #222;
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 16px;
+  }
+  
+  /* Title */
+  .checklist-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #ff4500;
+  }
+  
+  /* Description */
+  .checklist-description {
+    font-size: 1rem;
+    color: #555;
+  }
+  

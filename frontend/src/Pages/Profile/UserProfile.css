@@ -1,0 +1,131 @@
+/* Profile Container */
+.profile-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Profile Header */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+  }
+  
+  /* Profile Image */
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff7b00;
+    cursor: pointer;
+  }
+  
+  .profile-img:hover {
+    opacity: 0.8;
+  }
+  
+  /* Profile Info */
+  .profile-info {
+    text-align: left;
+  }
+  
+  .profile-info h2 {
+    margin: 5px 0;
+  }
+  
+  .profile-stats {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  .profile-stats span {
+    font-weight: 600;
+  }
+  
+  /* Edit Inputs */
+  .edit-input {
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .edit-textarea {
+    width: 100%;
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    height: 60px;
+  }
+  
+  /* Action Buttons */
+  .action-buttons {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .edit-btn {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .edit-btn:hover {
+    background-color: #444;
+  }
+  
+  .upload-btn {
+    background-color: #ff7b00;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .upload-btn:hover {
+    background-color: #e66a00;
+  }
+  
+  /* Posts Grid */
+  .posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+  }
+  
+  .post-img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  /* Start Live Button */
+.live-btn {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .live-btn:hover {
+    background-color: #c9302c;
+  }
+  

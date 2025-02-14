@@ -1,0 +1,51 @@
+.LiteralArt {
+  text-align: center;
+  /* padding: 20px; */
+  margin: 0;
+  /* Center the entire container horizontally */
+  /* max-width: 960px; */
+}
+
+.LiteralArtLists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 40px;
+
+  margin: 2rem 3.5rem;
+}
+
+.LiteralArtListsElemenets {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-decoration: none;
+  /* margin: 1rem; */
+}
+
+.LiteralArtListsElemenetsInner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.LiteralArtListsElemenetsImage {
+  width: 100%;
+  max-height: 150px; /* Adjust as needed */
+  object-fit: cover;
+}
+
+.LiteralArtListsElemenetsText {
+  padding: 15px;
+}
+
+.LiteralArtListsElemenetsTitle {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.LiteralArtListsElemenetsAuthor {
+  font-size: 0.9rem;
+  color: #666;
+}

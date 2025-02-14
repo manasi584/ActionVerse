@@ -1,0 +1,75 @@
+.LiteralArtElement {
+  /* max-width: 800px; */
+  margin: 2.5rem auto;
+  flex: 9;
+  padding: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Enable vertical scrolling if content exceeds height */
+}
+
+.LiteralArtElementTitle {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.LiteralArtElementAuthor {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.LiteralArtElementMiddle {
+  height: 40vh; /* Adjust this value to control image height */
+  position: relative;
+}
+
+.LiteralArtElementImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.LiteralArtElementContent {
+  white-space: pre-wrap;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  overflow-y: auto; /* Enable scrolling within the content area */
+  flex-grow: 1; /* Allow the content area to grow to fill the remaining height */
+}
+
+.LiteralArtElement-Loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 2rem;
+}
+
+.LiteralArtElementDetail-NotFound {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+}
+.LiteralArtElementIcons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.LiteralArtElementIcons svg {
+  margin-left: 0.5rem;
+  color: #666;
+  cursor: pointer;
+  font-size: 1.2rem; /* Increase icon size */
+}
+
+.LiteralArtElementIcons svg.active {
+  fill: red; /* Change color to red when active */
+}
