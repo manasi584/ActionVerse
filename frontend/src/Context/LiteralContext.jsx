@@ -7,8 +7,30 @@ const literaryPiecesData = [
     title: "The Road Not Taken",
     author: "Robert Frost",
     content:
-      "Two roads diverged in a yellow wood,\nAnd sorry I could not travel both\nAnd be one traveler, long I stood\nAnd looked down one as far as I could\nTo where it bent in the undergrowth;",
+      "Two roads diverged in a yellow wood,\n" +
+      "And sorry I could not travel both\n" +
+      "And be one traveler, long I stood\n" +
+      "And looked down one as far as I could\n" +
+      "To where it bent in the undergrowth;",
     imageUrl: "/assets/literalArt/img1.jpg",
+    likes: 5,
+    comments: [
+      {
+        id: 1,
+        author: "Mansi Bhagat",
+        text: "This poem really resonates with me.",
+      },
+      {
+        id: 2,
+        author: "Rohan",
+        text: "A classic for a reason!",
+      },
+      {
+        id: 3,
+        author: "Nandini",
+        text: "I love the imagery in this poem.",
+      },
+    ],
   },
   {
     id: 2,
@@ -18,6 +40,39 @@ const literaryPiecesData = [
     content:
       "True! — nervous — very, very dreadfully nervous I had been and am; but why will you say that I am mad? The disease had sharpened my senses — not destroyed — not dulled them.",
     imageUrl: "/assets/literalArt/img2.jpg",
+    likes: 10,
+    comments: [
+      {
+        id: 1,
+        author: "Rajesh",
+        text: "Poe's mastery of suspense is evident here.",
+      },
+      {
+        id: 2,
+        author: "Anjali",
+        text: "A chilling and unforgettable story.",
+      },
+      {
+        id: 3,
+        author: "Ankur",
+        text: "The psychological terror is palpable.",
+      },
+      {
+        id: 4,
+        author: "Neha",
+        text: "A masterpiece of gothic literature.",
+      },
+      {
+        id: 5,
+        author: "Poonam",
+        text: "This story still gives me chills.",
+      },
+      {
+        id: 6,
+        author: "Meera",
+        text: "Poe's use of language is truly masterful.",
+      },
+    ],
   },
   {
     id: 3,
@@ -27,6 +82,29 @@ const literaryPiecesData = [
     content:
       "Storytelling is a powerful art form that has captivated audiences for centuries. It allows us to transport ourselves to different worlds, experience different emotions, and learn valuable lessons.",
     imageUrl: "/assets/literalArt/img3.jpg",
+    likes: 8,
+    comments: [
+      {
+        id: 1,
+        author: "Anika",
+        text: "Beautifully written!",
+      },
+      {
+        id: 2,
+        author: "Rohan",
+        text: "This resonates with me deeply.",
+      },
+      {
+        id: 3,
+        author: "Priya",
+        text: "Very insightful.",
+      },
+      {
+        id: 4,
+        author: "Vivek",
+        text: "A valuable reminder of the power of stories.",
+      },
+    ],
   },
   {
     id: 4,
@@ -34,8 +112,39 @@ const literaryPiecesData = [
     title: "If",
     author: "Rudyard Kipling",
     content:
-      "If you can keep your head when all about you\nAre losing theirs and blaming it on you,\nIf you can trust yourself when all men doubt you,\nBut make allowance for their doubting too;",
+      "If you can keep your head when all about you\n" +
+      "Are losing theirs and blaming it on you,\n" +
+      "If you can trust yourself when all men doubt you,\n" +
+      "But make allowance for their doubting too;",
     imageUrl: "/assets/literalArt/img4.jpg",
+    likes: 7,
+    comments: [
+      {
+        id: 1,
+        author: "Rajesh",
+        text: "A timeless piece of advice.",
+      },
+      {
+        id: 2,
+        author: "Anjali",
+        text: "Very inspiring!",
+      },
+      {
+        id: 3,
+        author: "Suresh",
+        text: "This poem always gives me strength.",
+      },
+      {
+        id: 4,
+        author: "Meera",
+        text: "A powerful message.",
+      },
+      {
+        id: 5,
+        author: "Vivek",
+        text: "A true classic.",
+      },
+    ],
   },
   {
     id: 5,
@@ -53,7 +162,20 @@ const literaryPiecesData = [
       "I dont remember what you wore,\n" +
       "Or what you were holding\n" +
       "Or when did i stop walking.\n",
-    imageUrl: "/assets/literalArt/img5.jpg", // Replace with the actual image URL
+    imageUrl: "/assets/literalArt/img5.jpg",
+    likes: 4,
+    comments: [
+      {
+        id: 1,
+        author: "Aniket",
+        text: "Relatable! This perfectly captures the morning rush.",
+      },
+      {
+        id: 2,
+        author: "Diya",
+        text: "Love the casual and relatable tone.",
+      },
+    ],
   },
   {
     id: 6,
@@ -73,7 +195,94 @@ const literaryPiecesData = [
       "I stood there for the longest of seconds,\n" +
       "Thinking about i dont remember what,\n" +
       "And until realisation hit and i ran.",
-    imageUrl: "/assets/literalArt/img6.jpg", // Replace with the actual image URL
+    imageUrl: "/assets/literalArt/img6.jpg",
+    likes: 6,
+    comments: [
+      {
+        id: 1,
+        author: "Ishaan",
+        text: "Beautiful imagery! I can almost feel the intensity.",
+      },
+      {
+        id: 2,
+        author: "Avani",
+        text: "The emotions are so raw and relatable.",
+      },
+      {
+        id: 3,
+        author: "Rohan",
+        text: "This poem is truly captivating.",
+      },
+    ],
+  },
+  {
+    id: 7,
+    type: "poem",
+    title: "Hopeless Romantic",
+    author: "Jiya Choubey",
+    content: `
+        Hopelessly romantic, unknowingly dramatic.
+        That's what I remember about myself.
+        The guy caressed the fingers
+        Of the girl next to me,
+        She blushed, couldn't even meet his eyes.
+        I remembered how I wished for that.
+  
+        The undeniable want to be wanted
+        Gave a mix of emotions,
+        But with time it often made me more sad, less happy.
+        I still craved for being desired,
+        I loved when they confessed,
+        Tell me how deeply they are in love,
+        But what's next?
+        It terrified me to my core.
+        Gradually the anticipation turned into fear.
+  
+        Now remembering the guy holding her hands makes me wonder,
+        Are they still together?
+        Or did it wear out with time.
+        I saw people breaking hearts, Some getting hurt,  but was it worth it?
+        Others are still hopelessly romantic
+        But I? Those days seem to be long gone.`,
+    imageUrl: "/assets/literalArt/img7.jpeg",
+    likes: 3,
+    comments: [
+      {
+        id: 1,
+        author: "Aryan",
+        text: "This poem really resonated with me.",
+      },
+    ],
+  },
+  {
+    id: 8,
+    type: "poem",
+    title: "Empty Bed",
+    author: "Jiya Choubey",
+    content: `
+        The sheets on my left were cold,
+        I looked for you, still half sleep,
+        Realising you were long gone.
+        I wake up now, no, it's not a dream.
+        The window's open,
+        wild breezes spreading their wings,
+        And the pages lying all over the room,
+        I look non chalant,
+        But no that's not me.
+        Sat down in the corner of bed,
+        Wondering if it's the end of things,
+        Tears streaming down, this has to be.
+        He was a perfectly stable,
+        rhythmically chaotic yet calmest thing.
+        And I wished to live with him.
+        Now I am just the ex, half lunatic,
+        Mostly possessive, rest toxic.
+        No it's not a dream,
+        the door was half open too.
+        But it's my chained feets.`,
+    imageUrl: "/assets/literalArt/img8.jpeg",
+    likes: 2,
+    comments: [],
   },
 ];
 const LiteralContext = createContext();

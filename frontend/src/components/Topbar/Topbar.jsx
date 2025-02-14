@@ -2,12 +2,14 @@ import { useState } from "react";
 import "./topbar.css";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../Context/AuthContext";
+import { FiMenu, FiX } from "react-icons/fi"; // Import icons for hamburger menu
 
 export default function Topbar() {
   const { isAuthenticated, user, logout } = useAuth();
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  function handleClick(e) {
+  function handleLogout(e) {
     e.preventDefault();
     logout();
     navigate("/");
@@ -16,46 +18,45 @@ export default function Topbar() {
   return (
     <div className="top">
       <div className="topLeft">
-        {/*  Logo */}
         <img src="/logo.png" alt="Logo" className="topLeftLogo" />
       </div>
-      
-      <div className="topCenter">
+
+      {/* Hamburger Icon for Mobile */}
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        {menuOpen ? <FiX /> : <FiMenu />}
+      </div>
+
+      {/* Navigation Links */}
+      <div className={`topCenter ${menuOpen ? "active" : ""}`}>
         <ul className="topList">
           <li className="topListItem">
-            <Link to="/"> Home</Link>
+            <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
           </li>
+          
           <li className="topListItem">
             Categories
             <ul className="topbarSubCategories">
-              <li>
-                <Link to="/visual-art"> Visual Arts</Link>
-              </li>
-              <li>
-                <Link to="/Literature"> Literal Arts</Link>
-              </li>
-              <li>
-                <Link to="/digital-media"> Digital Media</Link>
-              </li>
-              <li>
-                <Link to="/performing-art"> Performing Arts</Link>
-              </li>
+              <li><Link to="/visual-art" onClick={() => setMenuOpen(false)}>Visual Arts</Link></li>
+              <li><Link to="/literature" onClick={() => setMenuOpen(false)}>Literary Arts</Link></li>
+              <li><Link to="/digital-media" onClick={() => setMenuOpen(false)}>Digital Media</Link></li>
+              <li><Link to="/performing-art" onClick={() => setMenuOpen(false)}>Performing Arts</Link></li>
             </ul>
           </li>
+
           <li className="topListItem">
-            <Link to="/crowdfund">Crowdfunding</Link>
+            <Link to="/crowdfund" onClick={() => setMenuOpen(false)}>Crowdfunding</Link>
           </li>
           <li className="topListItem">
-            <Link to="/livestream">Live Stream</Link>
+            <Link to="/livestream" onClick={() => setMenuOpen(false)}>Live Stream</Link>
           </li>
 
           {isAuthenticated && (
             <>
               <li className="topListItem">
-                <Link to="/profile">Profile</Link>
+                <Link to="/profile" onClick={() => setMenuOpen(false)}>Profile</Link>
               </li>
               <li className="topListItem">
-                <Link to="/map">Find artists near me</Link>
+                <Link to="/map" onClick={() => setMenuOpen(false)}>Find Artists Near Me</Link>
               </li>
             </>
           )}
@@ -66,7 +67,7 @@ export default function Topbar() {
         {isAuthenticated ? (
           <>
             <span className="topbarUser">Welcome {user?.email?.split("@")[0]} !!</span>
-            <button className="topbarButton" onClick={handleClick}>
+            <button className="topbarButton" onClick={handleLogout}>
               LogOut
             </button>
           </>
