@@ -18,13 +18,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   padding: 0 20px;
-}
-
-.topLeft {
-  display: flex;
-  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .topLeftLogo {
@@ -32,25 +27,30 @@
   height: 55px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 12px;
   border: 2px solid white;
 }
 
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+  color: white;
+}
+
 .topCenter {
-  flex: 1; /* Allows the topCenter to take up available space */
+  flex: 1;
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
+  justify-content: center;
+  align-items: center;
 }
 
 .topList {
   list-style: none;
   display: flex;
-  justify-content: center; /* Centers the list items horizontally */
-  align-items: center; /* Centers the list items vertically */
-  padding: 0;
+  justify-content: center;
+  align-items: center;
 }
-
 
 .topListItem {
   margin: 0 20px;
@@ -58,7 +58,6 @@
   font-size: 16px;
   font-weight: 600;
   position: relative;
-  transition: color 0.3s ease-in-out;
 }
 
 .topListItem a {
@@ -71,10 +70,7 @@
   color: #ffd700;
 }
 
-.categoryLink {
-  cursor: pointer;
-}
-
+/* Subcategories */
 .topbarSubCategories {
   display: none;
   position: absolute;
@@ -106,6 +102,12 @@
   align-items: center;
 }
 
+.topbarUser {
+  font-weight: 600;
+  color: white;
+  margin-right: 15px;
+}
+
 .topbarButton {
   background-color: #ffcc00;
   color: #333;
@@ -128,7 +130,11 @@
 
 /* 📱 RESPONSIVE DESIGN */
 @media (max-width: 1024px) {
-  .topList {
+  .hamburger {
+    display: block;
+  }
+
+  .topCenter {
     display: none;
     flex-direction: column;
     position: absolute;
@@ -139,19 +145,28 @@
     padding: 10px 0;
   }
 
+  .topCenter.active {
+    display: flex;
+  }
+
+  .topList {
+    flex-direction: column;
+    width: 100%;
+  }
+
   .topListItem {
     text-align: center;
     margin: 12px 0;
   }
 
-  .topList.active {
-    display: flex;
+  .topbarSubCategories {
+    position: static;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
   }
 
-  .hamburger {
-    display: block;
-    cursor: pointer;
-    font-size: 26px;
+  .topbarSubCategories li a {
     color: white;
   }
 }
@@ -176,12 +191,4 @@
     font-size: 14px;
     padding: 8px 12px;
   }
-}
-.topbarUser{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 70px;
-  font-size: large;
-  color: whitesmoke;
 }
