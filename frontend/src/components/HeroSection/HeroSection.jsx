@@ -1,4 +1,4 @@
-import video1 from "/video3.mp4";
+import video1 from "/video.mp4";
 import "./HeroSection.css";
 
 const HeroSection = () => {
@@ -8,12 +8,11 @@ const HeroSection = () => {
       {/* Content before Video */}
       <div className="hero-content">
         <h1 className="hero-title">
-          Empowering Youth{" "}
-          <span>Elevating Talent</span>
+        United by purpose, driven by action{" "}
+          <span>Actionverse</span>
         </h1>
         <p className="hero-description">
-          Artfluence is the ultimate marketplace for young street performers, artists, 
-          and hustlers. Showcase your skills, get gigs, and earn directly from fans.
+        ActionVerse is a decentralized hub empowering activists and changemakers to connect, organize, fund, and amplify social movements.  It features a real-time geo-map of causes, secure campaign organization tools with encrypted chats and live streaming, and blockchain-based crowdfunding and grant opportunities.
         </p>
         <div className="hero-buttons">
           <a href="#" className="hero-start">Get Started</a>
