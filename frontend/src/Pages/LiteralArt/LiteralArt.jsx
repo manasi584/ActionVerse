@@ -3,7 +3,7 @@ import "./LiteralArt.css";
 import LiteralTopbar from "../../components/LiteralTopbar/LiteralTopbar";
 import { useLiteral } from "../../Context/LiteralContext";
 import Topbar from "../../components/Topbar/Topbar";
-import Footer from "../Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 
 export default function LiteralArt() {
   const { literalList } = useLiteral();

@@ -6,7 +6,7 @@ import { ChevronDown } from "lucide-react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {categories,dummyUsers} from "../../Context/Map"
 import Topbar from "../../components/Topbar/Topbar";
-import Footer from "../Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 
 // Fix default marker icon issue in Leaflet
 import markerIcon from "leaflet/dist/images/marker-icon.png";

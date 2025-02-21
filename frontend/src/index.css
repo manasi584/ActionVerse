@@ -5,13 +5,13 @@
   font-family: "Poppins", sans-serif;
   color-scheme: light; /* Ensures better readability */
 
-  --primary-color: #ff6700; /* Warm Orange */
-  --secondary-color: #ff3d00; /* Vibrant Red-Orange */
+  --primary-color: #2e7d32; /* Forest Green */
+  --secondary-color: #66bb6a; /* Vibrant Light Green */
 
-  /* Background: Subtle warm gradient */
-  --background-color: linear-gradient(135deg, #fdf6ec, hwb(31 80% 0%));
+  /* Background: Soft green gradient */
+  --background-color: linear-gradient(135deg, #e8f5e9, #c8e6c9);
 
-  --text-color: #222; /* Darker Gray for better contrast */
+  --text-color: #1b5e20; /* Deep Green for contrast */
 }
 
 /* Apply background globally */

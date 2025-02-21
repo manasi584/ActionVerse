@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./UserProfile.css";
 import Topbar from "../../components/Topbar/Topbar";
-import Footer from "../Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 
 
 const UserProfile = () => {

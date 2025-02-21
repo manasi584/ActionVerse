@@ -1,9 +1,9 @@
 import Topbar from "../../components/Topbar/Topbar";
-import HeroSection from "../HeroSection/HeroSection";
-import Workflow from "../Workflow/Workflow";
-import Pricing from "../Pricing/Pricing";
-import Testimonials from "../Testimonials/Testimonials";
-import Footer from "../Footer/Footer";
+import HeroSection from "../../components/HeroSection/HeroSection";
+import Workflow from "../../components/Workflow/Workflow";
+import Pricing from "../../components/Pricing/Pricing";
+import Testimonials from "../../components/Testimonials/Testimonials";
+import Footer from "../../components/Footer/Footer";
 
 import "./Home.css";
 

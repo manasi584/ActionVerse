@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import CameraPreviewButton from "./CameraPreviewButton";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Topbar from "../../components/Topbar/Topbar";
-import Footer from "../Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 
 const LivestreamStart = () => {
   const [isStreaming, setIsStreaming] = useState(false);

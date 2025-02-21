@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Nav } from "react-bootstrap";
 import Topbar from "../../components/Topbar/Topbar";
-import Footer from "../Footer/Footer"
+import Footer from "../../components/Footer/Footer"
 import {sampleVideos} from "../../Context/PerformingArtContext"
 
 

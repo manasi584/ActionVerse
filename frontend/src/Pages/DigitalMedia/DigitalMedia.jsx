@@ -2,7 +2,7 @@ import { digitalMediaWorks } from "../../data/index";
 import { FaHeart, FaRegBookmark, FaComment } from "react-icons/fa";
 import "./DigitalMedia.css"; 
 import Topbar from "../../components/Topbar/Topbar";
-import Footer from "../Footer/Footer";
+import Footer from "../../components/Footer/Footer";
 
 const DigitalMedia = () => {
   return (

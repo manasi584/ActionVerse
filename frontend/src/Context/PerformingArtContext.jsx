@@ -3,7 +3,7 @@ export const sampleVideos = [
       id: 1,
       title: "Mesmerizing Flamenco Dance",
       thumbnail: "https://img.pixers.pics/pho_wat(s3:700/FO/52/33/89/12/700_FO52338912_451988721a60fce8b0af17e28ba7d93e.jpg,700,666,cms:2018/10/5bd1b6b8d04b8_220x50-watermark.png,over,480,616,jpg)/posters-two-silhouettes-of-flamenco-dancer.jpg.jpg", // Replace with actual thumbnail URL
-      videoUrl: "https://www.youtube.com/embed/1ZOQb4aEzpk?si=mt5jgGdh-h_QCN9V", 
+      videoUrl: "https://www.google.com/search?q=flamenco+dance+youtube+video&oq=flamenco+dance+youtube+video&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQLhhA0gEJMTU2OTBqMGoxqAIAsAIA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:957946c8,vid:sFUC5ROtN8M,st:0",
       views: "3.2M views",
     },
     {

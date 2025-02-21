@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Topbar from "../../components/Topbar/Topbar";
-import Footer from "../Footer/Footer"
+import Footer from "../../components/Footer/Footer"
 import {sampleLiveStreams} from "../../Context/LivestreamContext"
 
 
