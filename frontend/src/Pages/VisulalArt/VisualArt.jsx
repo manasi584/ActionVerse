@@ -9,8 +9,8 @@ const VisualArt = () => {
     <>
     <Topbar/>
     <div className="visualArt">
-      <h1 className="pageTitle">Visual Art Space 🎨</h1>
-      <p className="subText">A creative space for Indian visual artists</p>
+      <h1 className="pageTitle">Environmental Campaigns space</h1>
+      <p className="subText">A creative space for Indian environmental activists</p>
 
       <div className="artGallery">
         {visualArtworks.map((art) => (
