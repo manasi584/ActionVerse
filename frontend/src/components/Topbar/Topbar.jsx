@@ -18,7 +18,7 @@ export default function Topbar() {
   return (
     <div className="top">
       <div className="topLeft">
-        <img src="/logo.png" alt="Logo" className="topLeftLogo" />
+        <img src="/logo1.png" alt="Logo" className="topLeftLogo" />
       </div>
 
       {/* Hamburger Icon for Mobile */}
