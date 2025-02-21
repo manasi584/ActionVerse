@@ -7,10 +7,11 @@
   padding: 0;
 }
 
+/* 🌿 Topbar with Green Gradient */
 .top {
   width: 100%;
   height: 65px;
-  background: linear-gradient(90deg, #ef670c, #ff8c42);
+  background: linear-gradient(90deg, #0b6623, #33a852); /* Deep Green to Light Green */
   position: sticky;
   top: 0;
   left: 0;
@@ -30,7 +31,7 @@
   border: 2px solid white;
 }
 
-/* Hamburger Menu */
+/* 🍔 Hamburger Menu */
 .hamburger {
   display: none;
   font-size: 26px;
@@ -60,6 +61,7 @@
   position: relative;
 }
 
+/* 🌱 Navigation Links */
 .topListItem a {
   text-decoration: none;
   color: white;
@@ -67,11 +69,10 @@
 }
 
 .topListItem:hover a {
-  /* color: #ffd700; */
-  color: rgb(0, 69, 69);
+  color: #b0e57c; /* Light green on hover */
 }
 
-/* Subcategories */
+/* 📂 Dropdown Menu */
 .topbarSubCategories {
   display: none;
   position: absolute;
@@ -90,7 +91,7 @@
 }
 
 .topbarSubCategories li a {
-  color: #333;
+  color: #0b6623;
   font-weight: 500;
 }
 
@@ -109,9 +110,10 @@
   margin-right: 15px;
 }
 
+/* 🌍 Green-Themed Button */
 .topbarButton {
-  background-color: #ffcc00;
-  color: #333;
+  background-color: #b0e57c; /* Light Green */
+  color: #0b6623;
   font-weight: 600;
   border: none;
   padding: 5px 10px;
@@ -121,11 +123,11 @@
 }
 
 .topbarButton:hover {
-  background-color: #ffb700;
+  background-color: #9bd66a; /* Slightly darker green */
 }
 
 .topbarButton a {
-  color: #333;
+  color: #0b6623;
   text-decoration: none;
 }
 
@@ -142,7 +144,7 @@
     top: 65px;
     left: 0;
     width: 100%;
-    background: rgba(239, 103, 12, 0.9);
+    background: rgba(11, 102, 35, 0.9);
     padding: 10px 0;
   }
 
@@ -193,3 +195,12 @@
     padding: 8px 12px;
   }
 }
+
+
+
+
+
+
+
+
+

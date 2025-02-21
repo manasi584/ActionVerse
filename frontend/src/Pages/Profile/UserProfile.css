@@ -1,131 +1,168 @@
 /* Profile Container */
 .profile-container {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-  }
-  
-  /* Profile Header */
+  max-width: 950px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+/* Profile Image */
+.profile-img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #1b5e20;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+/* Profile Info */
+.profile-info {
+  text-align: left;
+}
+
+.profile-info h2 {
+  margin: 5px 0;
+  font-size: 1.5rem;
+  color: #1b5e20;
+}
+
+.profile-stats {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  margin: 10px 0;
+  color: #444;
+}
+
+.profile-stats span {
+  font-weight: bold;
+}
+
+/* Edit Inputs */
+.edit-input,
+.edit-textarea {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.edit-textarea {
+  resize: none;
+  height: 60px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Buttons Styling */
+.edit-btn,
+.upload-btn,
+.live-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Edit Profile Button */
+.edit-btn {
+  background: linear-gradient(to right, #388e3c, #1b5e20);
+  color: white;
+}
+
+.edit-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #2e7d32, #145214);
+}
+
+/* Upload Work Button */
+.upload-btn {
+  background: linear-gradient(to right, #ffa726, #ff6f00);
+  color: white;
+}
+
+.upload-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #ff9800, #e65100);
+}
+
+/* Start Live Button */
+.live-btn {
+  background: linear-gradient(to right, #d32f2f, #b71c1c);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.live-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #c62828, #8e0000);
+}
+
+/* Posts Grid */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.post-img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.post-img:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
   .profile-header {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 20px;
-  }
-  
-  /* Profile Image */
-  .profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ff7b00;
-    cursor: pointer;
-  }
-  
-  .profile-img:hover {
-    opacity: 0.8;
-  }
-  
-  /* Profile Info */
-  .profile-info {
-    text-align: left;
-  }
-  
-  .profile-info h2 {
-    margin: 5px 0;
-  }
-  
-  .profile-stats {
-    display: flex;
-    gap: 15px;
-    font-size: 14px;
-    margin: 10px 0;
-  }
-  
-  .profile-stats span {
-    font-weight: 600;
-  }
-  
-  /* Edit Inputs */
-  .edit-input {
-    width: 100%;
-    padding: 5px;
-    font-size: 18px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .edit-textarea {
-    width: 100%;
-    padding: 5px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: none;
-    height: 60px;
-  }
-  
-  /* Action Buttons */
-  .action-buttons {
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .edit-btn {
-    background-color: #555;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .edit-btn:hover {
-    background-color: #444;
-  }
-  
-  .upload-btn {
-    background-color: #ff7b00;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .upload-btn:hover {
-    background-color: #e66a00;
-  }
-  
-  /* Posts Grid */
-  .posts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-  }
-  
-  .post-img {
-    width: 100%;
-    border-radius: 8px;
-    object-fit: cover;
+    text-align: center;
   }
 
-  /* Start Live Button */
-.live-btn {
-    background-color: #d9534f;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
+  .profile-img {
+    width: 110px;
+    height: 110px;
   }
-  
-  .live-btn:hover {
-    background-color: #c9302c;
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 10px;
   }
-  
+
+  .posts-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}

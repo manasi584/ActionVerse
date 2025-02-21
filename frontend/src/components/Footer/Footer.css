@@ -1,72 +1,94 @@
-/* Footer Container */
+/*  Footer Container */
 .footer {
-    margin-top: 80px;
-    padding: 50px 0;
-    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Softer border */
-    
-    /* Warm gradient to complement orange buttons */
-    background: linear-gradient(135deg, #ffedd5, #ffe4b5); 
-    
-    color: #222; /* Darker for contrast */
-    text-align: center; /* Centers all text */
-  }
-  
-  /* Footer Grid Layout */
+  margin-top: 80px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #147d4e, #3ab37c); /* Soft green gradient */
+  border-top: 3px solid #6fd89b; /* Lighter green divider */
+  color: #eaf7f0; /* Soft pastel green for readability */
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+/*  Footer Grid Layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
   .footer-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column layout for better centering */
-    gap: 20px;
-    justify-content: center; /* Centers items */
-  }
-  
-  @media (min-width: 1024px) {
-    .footer-grid {
       grid-template-columns: repeat(3, 1fr);
       max-width: 1200px;
-      margin: 0 auto; /* Center the grid */
-    }
+      margin: 0 auto;
   }
-  
-  /* Footer Heading */
-  .footer h3 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 16px;
-    color: #111; /* Darker for strong contrast */
-  }
-  
-  /* Footer List */
-  .footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto; /* Centers lists */
-    display: inline-block; /* Ensures proper alignment */
-    text-align: left; /* Aligns text properly in lists */
-  }
-  
-  /* Footer List Items */
-  .footer ul li {
-    margin-bottom: 10px;
-  }
-  
-  /* Footer Links */
-  .footer a {
-    text-decoration: none;
-    color: #444; /* Subtle contrast */
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .footer a:hover {
-    color: #ff6700; /* Complementary orange */
-  }
-  
-  /* Responsive Centering */
-  @media (max-width: 768px) {
-    .footer {
+}
+
+/* 📌 Footer Heading */
+.footer h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #ffffff; /* White for contrast */
+}
+
+/* 📜 Footer List */
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🔗 Footer List Items */
+.footer ul li {
+  margin-bottom: 12px;
+}
+
+/* 🌱 Footer Links */
+.footer a {
+  text-decoration: none;
+  color: #d1f2df; /* Soft greenish link */
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+  color: #6fd89b; /* Lighter green hover */
+  text-decoration: underline;
+}
+
+/* 🛠️ Responsive Centering */
+@media (max-width: 768px) {
+  .footer {
       text-align: center;
-    }
-    .footer-grid {
-      grid-template-columns: 1fr; /* Stack items */
-    }
   }
-  
+  .footer-grid {
+      grid-template-columns: 1fr; /* Stack items */
+  }
+}
+
+/*  Ensures no overlap with testimonials */
+.testimonial-section {
+  position: relative;
+  z-index: 5;
+  padding-bottom: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

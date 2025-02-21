@@ -1,91 +1,101 @@
 /* Testimonials Section */
 .testimonials-section {
-    margin-top: 80px;
-    text-align: center;
-    letter-spacing: 1px;
-  }
-  
-  /* Heading */
+  margin-top: 80px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Heading */
+.testimonials-heading {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #134e5e; /* Deep teal green for bold contrast */
+}
+
+@media (min-width: 640px) {
   .testimonials-heading {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    font-weight: bold;
-  }
-  
-  @media (min-width: 640px) {
-    .testimonials-heading {
       font-size: 3.5rem;
-    }
   }
-  
-  @media (min-width: 1024px) {
-    .testimonials-heading {
+}
+
+@media (min-width: 1024px) {
+  .testimonials-heading {
       font-size: 4rem;
-    }
   }
-  
-  /* Testimonials Container */
-  .testimonials-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  /* Testimonial Card */
+}
+
+/* Testimonials Container */
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  width: 100%;
+  padding: 8px;
+}
+
+@media (min-width: 640px) {
   .testimonial-card {
-    width: 100%;
-    padding: 8px;
-  }
-  
-  @media (min-width: 640px) {
-    .testimonial-card {
       width: 50%;
-    }
   }
-  
-  @media (min-width: 1024px) {
-    .testimonial-card {
+}
+
+@media (min-width: 1024px) {
+  .testimonial-card {
       width: 33.33%;
-    }
   }
-  
-  /* Testimonial Content */
-  .testimonial-content {
-    background-color: #da7c11;
-    padding: 24px;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 300;
-    border: 1px solid #333;
-    text-align: left;
-  }
-  
-  /* User Info */
-  .testimonial-user {
-    display: flex;
-    align-items: start;
-    margin-top: 20px;
-  }
-  
-  /* User Image */
-  .user-image {
-    width: 48px;
-    height: 48px;
-    margin-right: 16px;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-  }
-  
-  /* User Name */
-  .user-name {
-    font-size: 1.1rem;
-    font-weight: 600;
-  }
-  
-  /* User Company */
-  .user-company {
-    font-size: 0.9rem;
-    font-style: italic;
-    color: #777;
-  }
-  
+}
+
+/* Testimonial Content */
+.testimonial-content {
+  background: linear-gradient(135deg, #1e6847, #2e8b57); /* Gradient effect for a dynamic look */
+  padding: 24px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 300;
+  border: 1px solid #134e5e; /* Subtle contrast */
+  text-align: left;
+  color: #e6f7eb; /* Light, readable text */
+  box-shadow: 0px 4px 10px rgba(0, 100, 60, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.testimonial-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 20px rgba(0, 100, 60, 0.3);
+}
+
+/* User Info */
+.testimonial-user {
+  display: flex;
+  align-items: start;
+  margin-top: 20px;
+}
+
+/* User Image */
+.user-image {
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  border-radius: 50%;
+  border: 2px solid #34a97b; /* A brighter green for contrast */
+}
+
+/* User Name */
+.user-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #dff7e5; /* Softer green-white */
+}
+
+/* User Cause */
+.user-company {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #c1e3d2; /* Muted green */
+}

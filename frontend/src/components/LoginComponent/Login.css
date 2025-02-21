@@ -5,24 +5,49 @@
 .loginFormLabel {
   display: block;
   margin-bottom: 2px;
+  font-weight: 500;
+  color: #cadfce; /* Dark Green */
 }
 
 .loginFormInput {
   width: 250px;
   padding: 10px;
-  border: 1px solid #ccc;
-
+  border: 1px solid #2e7d32; /* Darker Green Border */
   border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
 }
 
+/* Input Focus Effect */
+.loginFormInput:focus {
+  border-color: #638a65;
+  box-shadow: 0px 0px 5px rgba(27, 94, 32, 0.5);
+}
+
+/* Updated Dark Green Gradient Button */
 .loginFormButton {
-  background: linear-gradient(to right, rgb(255, 237, 202), rgb(255, 218, 143));
-  /* color: #fff; */
+  background: linear-gradient(to right, #68d96d, #39933f6d); /* Dark Green Gradient */
+  color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
 }
+
+/* Button Hover Effect */
+.loginFormButton:hover {
+  background: linear-gradient(to right, #1b5e20, #004d40); /* Deeper Green */
+  transform: scale(1.05);
+}
+
+/* Button Click Effect */
+.loginFormButton:active {
+  transform: scale(0.98);
+}
+
+/* Button Container */
 .loginFormButtonContainer {
   display: flex;
   justify-content: center;
@@ -30,10 +55,10 @@
   margin: 0.5rem 0;
   width: 100%;
 }
+
+/* Centered Login Form */
 .loginForm {
-  /* ... other styles ... */
   display: flex;
   flex-direction: column;
   align-items: center; /* Center horizontally */
 }
-

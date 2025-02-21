@@ -7,39 +7,66 @@
   padding: 20px; /* Adds padding for smaller screens */
 }
 
+/* Updated container with dark green gradient */
 .loginSignupContainer {
-  background-color: #fff;
+  background: linear-gradient(to right, #2e7d32, #1b5e20); /* Dark Green Gradient */
+  color: #fff;
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 10px 2px 5px rgba(144, 168, 153, 0.1);
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(27, 94, 32, 0.3);
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid;
-  border-color: rgb(8, 65, 65);
-  background: linear-gradient(to right, rgb(210, 154, 24), rgb(212, 213, 175));
+  border: 1px solid #004d40; /* Deep Green Border */
   width: 400px; /* Default width */
   max-width: 90%; /* Prevents overflow on smaller screens */
 }
 
+/* Heading */
 .LoginSignupContainerHeading {
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #fff;
 }
+
+/* Message */
 .LoginSignupContainerMessage {
   text-align: center;
   font-size: 1rem;
-  color: #1f1e1e;
+  color: #dcedc8; /* Soft green for contrast */
   margin-bottom: 20px;
 }
-.signup-option{
-  margin-left:40px;
+
+/* Sign-up & Login Options */
+.signup-option,
+.login-option {
+  margin-left: 40px;
   cursor: pointer;
+  color: #c8e6c9; /* Light green */
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
 }
 
-.login-option{
-  margin-left:40px;
-  cursor: pointer;
+/* Hover Effect */
+.signup-option:hover,
+.login-option:hover {
+  color: #ffffff; /* Brighter contrast */
+  text-decoration: underline;
 }
 
+/* Responsive Design */
+@media (max-width: 640px) {
+  .loginSignupContainer {
+    width: 90%;
+    padding: 16px;
+  }
 
+  .LoginSignupContainerHeading {
+    font-size: 1.5rem;
+  }
+
+  .LoginSignupContainerMessage {
+    font-size: 0.9rem;
+  }
+}
