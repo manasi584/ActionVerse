@@ -10,7 +10,7 @@ export default function LiteralArt() {
   return (
     <div className="LiteralArt">
       <Topbar />
-      <h1 className="LiteralArtHeading">Literary Art</h1>
+      <h1 className="LiteralArtHeading">Petitions</h1>
       <div className="LiteralArtLists">
         {literalList.map((piece) => (
           <Link

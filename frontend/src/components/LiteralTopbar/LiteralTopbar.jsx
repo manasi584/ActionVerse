@@ -7,7 +7,7 @@ export default function LiteralTopbar() {
     <header className="Literal_topbar">
       <div className="Literal_topbar-left">
         <Link to="/literature/" className="Literal_topbar-logo">
-          Literal Art
+          Petitions
         </Link>
       </div>
       <div className="Literal_topbar-center">

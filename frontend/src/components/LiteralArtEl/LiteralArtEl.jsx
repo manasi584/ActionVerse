@@ -23,7 +23,6 @@ export default function LiteralArtEl() {
     description,
     imageUrl,
     title,
-    comments,
     creator,
     target,
     signature_goal,
@@ -52,7 +51,6 @@ export default function LiteralArtEl() {
           {" "}
           <span className="bold">target:</span> {target}
         </p>{" "}
-        {/* Added Target information */}
         <p>
           <span className="bold">Signatures:</span> {current_signatures} /{" "}
           {signature_goal || "Unlimited"}
