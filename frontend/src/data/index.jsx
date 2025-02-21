@@ -9,42 +9,43 @@ import user6 from "/user6.jpg";
 
 
 
+
 export const testimonials = [
   {
-    user: "Aarav Mehta",
-    company: "Street Dancer",
-    image: user1,
-    text: "Artfluence helped me land gigs I never imagined! I went from performing at signals to getting hired for big events. Life-changing!",
+    user: "Aisha Khan",
+    organization: "Climate Action Now",
+    image: user1, // Replace with your image component or path
+    text: "ActionVerse connected us with volunteers and donors we wouldn't have reached otherwise.  It's a game-changer for our climate advocacy efforts.",
   },
   {
-    user: "Simran Kaur",
-    company: "Graffiti Artist",
-    image: user2,
-    text: "This platform gave me exposure and a fan base. Now I get commissions for my street art from local businesses!",
+    user: "Raj Patel",
+    organization: "Community Food Bank",
+    image: user2, // Replace with your image component or path
+    text: "The crowdfunding feature on ActionVerse helped us raise funds for essential supplies during a crisis.  The transparent donation system built trust with our supporters.",
   },
   {
-    user: "Rahul Verma",
-    company: "Beatboxer",
-    image: user3,
-    text: "Thanks to Artfluence, I can showcase my talent and earn through live tipping! More power to the hustlers out there.",
+    user: "Maria Rodriguez",
+    organization: "Human Rights Watch",
+    image: user3, // Replace with your image component or path
+    text: "ActionVerse's secure communication tools were crucial for organizing our campaign. The real-time map kept our team coordinated and informed.",
   },
   {
-    user: "Neha Sharma",
-    company: "Folk Singer",
-    image: user4,
-    text: "The crowdfunding feature helped me get my first professional mic! Artfluence truly empowers grassroots artists.",
+    user: "David Lee",
+    organization: "Local Environmental Group",
+    image: user4, // Replace with your image component or path
+    text: "The AI-driven insights helped us target our messaging and reach a wider audience. ActionVerse is essential for effective activism.",
   },
   {
-    user: "Manoj Gupta",
-    company: "Street Magician",
-    image: user5,
-    text: "I used to perform on the streets without much recognition. Now, I get online gigs and even teach magic workshops!",
+    user: "Sarah Chen",
+    organization: "Education Reform Initiative",
+    image: user5, // Replace with your image component or path
+    text: "ActionVerse made it easy to connect with other organizations and collaborate on joint projects.  It's strengthened our collective impact.",
   },
   {
-    user: "Sofia Ali",
-    company: "Poet & Storyteller",
-    image: user6,
-    text: "Artfluence turned my passion into a profession. Performing live and getting tipped online keeps me going!",
+    user: "Juan Garcia",
+    organization: "Social Justice Collective",
+    image: user6, // Replace with your image component or path
+    text: "ActionVerse made it easy to connect with other organizations and collaborate.",
   },
 ];
 
@@ -87,83 +88,87 @@ export const features = [
   },
 ];
 
+
 export const checklistItems = [
   {
-    title: "Easy Gig Booking",
+    title: "Effortless Campaign Initiation",
     description:
-      "Businesses can find and book talented individuals in just a few clicks.",
+      "Activists can quickly launch campaigns for protests, events, or initiatives with streamlined setup and integrated tools.",
   },
   {
-    title: "Instant Online Tipping",
+    title: "Seamless Donation & Funding",
     description:
-      "Support your favorite street artist through UPI-based tipping while they perform live.",
+      "Supporters can instantly contribute to causes and campaigns through secure, integrated payment gateways, including cryptocurrency options.",
   },
   {
-    title: "Talent Discovery",
+    title: "Real-Time Movement Mapping",
     description:
-      "Artists get geo-tagged so people nearby can discover and support them.",
+      "A dynamic geo-map displays active movements and causes, allowing users to discover local initiatives and connect with relevant groups.",
   },
   {
-    title: "Financial Freedom for Artists",
+    title: "Crowdfunding & Grant Platform",
     description:
-      "Performers can raise money via crowdfunding campaigns for essential tools or training.",
+      "Activists and organizations can raise funds for campaigns, resources, or community projects through integrated crowdfunding and grant application tools.",
   },
 ];
 
 export const pricingOptions = [
   {
-    title: "Free",
-    price: "Rs 0",
+    title: "Activist",
+    price: "10+ petitions signed",
     features: [
-      "Create a Profile & Showcase Work",
-      "Live Streaming Access",
-      "Get Tipped Online",
-      "Join Artist Communities",
+      "Join & Organize Social Movements",
+      "Access Secure Activist Chat & Coordination",
+      "Participate in Live Protest Streams",
+      "Earn Impact Badges for Contributions",
     ],
   },
   {
-    title: "Pro",
-    price: "Rs 10",
+    title: "Changemaker",
+    price: "500+ lives changed",
     features: [
-      "Premium Profile Listing",
-      "Priority Gig Bookings",
-      "Advanced Analytics",
-      "Higher Visibility on Talent Map",
+      "Launch Social Awareness Campaigns",
+      "Crowdfund for Activist Initiatives",
+      "Gain Higher Visibility on the Action Map",
+      "Track & Measure Your Social Impact",
     ],
   },
   {
-    title: "Enterprise",
-    price: "Rs 50",
+    title: "Cause Leader",
+    price: "1,000+ trees planted",
     features: [
-      "Corporate & Business Listings",
-      "Direct Hiring of Artists",
-      "Custom Talent Requests",
-      "Sponsored Talent Promotions",
+      "Mobilize Large-Scale Protests & Events",
+      "Access Direct Support from NGOs & Sponsors",
+      "Run AI-Powered Activism Analytics",
+      "Get Featured in the Global Action Network",
     ],
   },
 ];
 
+
+
 export const resourcesLinks = [
-  { href: "#", text: "How It Works" },
-  { href: "#", text: "Success Stories" },
-  { href: "#", text: "Community Guidelines" },
-  { href: "#", text: "Help & Support" },
+  { href: "#", text: "How ActionVerse Works" },
+  { href: "#", text: "Impact Stories" },
+  { href: "#", text: "Activist Code of Conduct" },
+  { href: "#", text: "Help & Safety Resources" },
 ];
 
 export const platformLinks = [
-  { href: "#", text: "Explore Talent" },
-  { href: "#", text: "Book a Gig" },
-  { href: "#", text: "Live Performances" },
-  { href: "#", text: "Crowdfunding Campaigns" },
+  { href: "#", text: "Find Activists & Movements" },
+  { href: "#", text: "Join a Social Campaign" },
+  { href: "#", text: "Live Protest & Awareness Streams" },
+  { href: "#", text: "Fund a Social Cause" },
 ];
 
 export const communityLinks = [
-  { href: "#", text: "Artist Meetups" },
-  { href: "#", text: "Workshops & Training" },
-  { href: "#", text: "Collaboration Hub" },
-  { href: "#", text: "Talent Spotlight" },
-  { href: "#", text: "Hire an Artist" },
-]; 
+  { href: "#", text: "Activist Meetups & Rallies" },
+  { href: "#", text: "Workshops & Advocacy Training" },
+  { href: "#", text: "Collaboration Hub for Change" },
+  { href: "#", text: "Impact Spotlight: Featured Activists" },
+  { href: "#", text: "NGOs & Movements Hiring Volunteers" },
+];
+
 
 export const visualArtworks = [
     {
