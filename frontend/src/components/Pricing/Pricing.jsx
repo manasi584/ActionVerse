@@ -5,7 +5,7 @@ import "./Pricing.css";
 const Pricing = () => {
   return (
     <div className="pricing-section">
-      <h2 className="pricing-heading">Choose Your <span className="text-orange-500">Hustle Plan</span></h2>
+      <h2 className="pricing-heading">Choose Your <span className="text-orange-500">Role</span></h2>
       <p className="pricing-subheading">
         Whether you're just starting out or already making waves, we've got a plan for you!
       </p>
@@ -19,10 +19,10 @@ const Pricing = () => {
                   <span className="popular-badge">(Most Popular)</span>
                 )}
               </p>
-              <p className="plan-price-wrapper">
+              {/* <p className="plan-price-wrapper">
                 <span className="plan-price">{option.price}</span>
                 <span className="plan-duration">/Month</span>
-              </p>
+              </p> */}
               <ul className="features-list">
                 {option.features.map((feature, index) => (
                   <li key={index} className="feature-item">
@@ -32,7 +32,7 @@ const Pricing = () => {
                 ))}
               </ul>
               <a href="#" className="subscribe-button">
-                Subscribe Now
+              Explore Now!
               </a>
             </div>
           </div>
