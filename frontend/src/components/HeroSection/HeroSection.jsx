@@ -8,8 +8,8 @@ const HeroSection = () => {
       {/* Content before Video */}
       <div className="hero-content">
         <h1 className="hero-title">
-        United by purpose, driven by action{" "}
-          <span>Actionverse</span>
+        United by Purpose, Driven by Action{" "}
+          <span>ActionVerse</span>
         </h1>
         <p className="hero-description">
         ActionVerse is a decentralized hub empowering activists and changemakers to connect, organize, fund, and amplify social movements.  It features a real-time geo-map of causes, secure campaign organization tools with encrypted chats and live streaming, and blockchain-based crowdfunding and grant opportunities.

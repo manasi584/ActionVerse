@@ -12,11 +12,12 @@
   margin-bottom: 16px;
   font-weight: bold;
   text-transform: uppercase;
+  color: #134e5e; /* Deep green */
 }
 
 .workflow-subheading {
   font-size: 1.1rem;
-  color: #ff6700; /* Bright orange for energy */
+  color: #34a97b; /* Vibrant green for energy */
   margin-bottom: 32px;
 }
 
@@ -54,15 +55,15 @@
   width: 90%;
   max-width: 400px;
   border-radius: 8px;
-  border: 2px solid #ff4500;
-  box-shadow: 0px 10px 20px rgba(255, 69, 0, 0.4);
+  border: 2px solid #1e6847;
+  box-shadow: 0px 10px 20px rgba(30, 104, 71, 0.4);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 /* Floating effect on hover */
 .workflow-image-container img:hover {
   transform: translateY(-10px);
-  box-shadow: 0px 20px 30px rgba(255, 69, 0, 0.5);
+  box-shadow: 0px 20px 30px rgba(30, 104, 71, 0.5);
 }
 
 @media (min-width: 1024px) {
@@ -98,7 +99,7 @@
 .checklist-item {
   display: flex;
   align-items: center;
-  background: rgba(255, 69, 0, 0.1);
+  background: rgba(30, 104, 71, 0.1); /* Soft green background */
   padding: 12px;
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
@@ -111,8 +112,8 @@
 
 /* Icon */
 .checklist-icon {
-  color: #ff6700;
-  background-color: #222;
+  color: #34a97b;
+  background-color: #1e2d24; /* Dark green-gray */
   height: 40px;
   width: 40px;
   padding: 8px;
@@ -128,13 +129,13 @@
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 2px;
-  color: #ff4500;
+  color: #1e6847;
 }
 
 /* Description */
 .checklist-description {
   font-size: 1rem;
-  color: #555;
+  color: #4a6f60; /* Muted green */
 }
 
 /* Small Screens Fixes */

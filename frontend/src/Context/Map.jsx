@@ -19,6 +19,6 @@ export const dummyUsers = [
     { id: 18, name: "Ryan", city: "Vadodara", lat: 22.3072, lng: 73.1812 },
   ];
 
-export const categories = ["All", "Visual Art", "Performing Art", "Literary", "Digital Artist"];
+export const categories = ["All", "Environment", "Human Rights", "Literacy", "Public Health", "Social Justice"];
   
   

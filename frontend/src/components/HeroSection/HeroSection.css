@@ -74,7 +74,7 @@
   
   /* Gradient Text */
   .hero-title span {
-    background: linear-gradient(to right, orange, red);
+    background: linear-gradient(to right, rgb(48, 128, 58), rgb(69, 224, 92));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -111,7 +111,7 @@
   }
   
   .hero-start {
-    background: linear-gradient(to right, orange, darkorange);
+    background: linear-gradient(to right, rgb(48, 128, 58), rgb(69, 224, 92));
     color: white;
   }
   

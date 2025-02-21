@@ -14,38 +14,38 @@ export const testimonials = [
   {
     user: "Aisha Khan",
     organization: "Climate Action Now",
-    image: user1, // Replace with your image component or path
+    image: user1, 
     text: "ActionVerse connected us with volunteers and donors we wouldn't have reached otherwise.  It's a game-changer for our climate advocacy efforts.",
   },
   {
     user: "Raj Patel",
     organization: "Community Food Bank",
-    image: user2, // Replace with your image component or path
+    image: user2, 
     text: "The crowdfunding feature on ActionVerse helped us raise funds for essential supplies during a crisis.  The transparent donation system built trust with our supporters.",
   },
   {
     user: "Maria Rodriguez",
     organization: "Human Rights Watch",
-    image: user3, // Replace with your image component or path
+    image: user3, 
     text: "ActionVerse's secure communication tools were crucial for organizing our campaign. The real-time map kept our team coordinated and informed.",
   },
   {
     user: "David Lee",
     organization: "Local Environmental Group",
-    image: user4, // Replace with your image component or path
+    image: user4, 
     text: "The AI-driven insights helped us target our messaging and reach a wider audience. ActionVerse is essential for effective activism.",
   },
   {
     user: "Sarah Chen",
     organization: "Education Reform Initiative",
-    image: user5, // Replace with your image component or path
+    image: user5, 
     text: "ActionVerse made it easy to connect with other organizations and collaborate on joint projects.  It's strengthened our collective impact.",
   },
   {
     user: "Juan Garcia",
     organization: "Social Justice Collective",
-    image: user6, // Replace with your image component or path
-    text: "ActionVerse made it easy to connect with other organizations and collaborate.",
+    image: user6, 
+    text: "The live streaming feature on ActionVerse allowed us to engage with our supporters in real-time.  It's a powerful tool for building community.",
   },
 ];
 
