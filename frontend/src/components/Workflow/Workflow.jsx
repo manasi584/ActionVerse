@@ -1,5 +1,5 @@
 import { CheckCircle2 } from "lucide-react";
-import hustleImg from "/hustle.jpg"; 
+import hustleImg from "/campaignImage.png"; 
 import { checklistItems } from "../../data/index";
 import "./Workflow.css";
 
@@ -7,13 +7,13 @@ const Workflow = () => {
   return (
     <div className="workflow-section">
       <h2 className="workflow-heading">
-        Level up your{" "}
+      Find your cause,{" "}
         <span className="bg-gradient-to-r from-orange-500 to-red-600 text-transparent bg-clip-text">
-          hustle game.
+        join the movement.
         </span>
       </h2>
       <p className="workflow-subheading">
-        Streamline your gigs, get noticed, and make more money doing what you love.
+      Find your cause, build your community. Actionverse: Where activism comes to life.
       </p>
       <div className="workflow-container">
         <div className="workflow-image-container">
