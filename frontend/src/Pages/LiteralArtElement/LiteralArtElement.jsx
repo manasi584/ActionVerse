@@ -21,7 +21,6 @@ export default function LiteralArtElement() {
       <LiteralTopbar />
       <div className="LiteralArtElementContainer">
         <LiteralArtEl />
-        <LiteralSidebar />
       </div>
     </div>
   );
