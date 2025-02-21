@@ -7,7 +7,6 @@ import { useState } from "react";
 
 export default function LiteralArtEl() {
   const { currLiteral, isLoading } = useLiteral();
-  const { author, content, imageUrl, title, comments } = currLiteral;
   const [isHeartClicked, setIsHeartClicked] = useState(false);
 
   const [showComments, setShowComments] = useState(false);
@@ -20,19 +19,56 @@ export default function LiteralArtEl() {
       <div className="LiteralArtElementDetail-NotFound">Piece not found.</div>
     );
   }
+  const {
+    description,
+    imageUrl,
+    title,
+    comments,
+    creator,
+    target,
+    signature_goal,
+    current_signatures,
+    created_date,
+    status,
+    signatures,
+  } = currLiteral;
 
+  console.log(currLiteral);
   return (
     <div className="LiteralArtElement">
       <div className="LiteralArtElementsTop">
         <h2 className="LiteralArtElementTitle">{title}</h2>
-        <p className="LiteralArtElementAuthor">By: {author}</p>
+        <p className="LiteralArtElementAuthor">By: {creator}</p>
       </div>
       <div className="LiteralArtElementMiddle">
         <img src={imageUrl} alt={title} className="LiteralArtElementImage" />
       </div>
       <div className="LiteralArtElementContent">
-        {content &&
-          content.split("\n").map((line, index) => <p key={index}>{line}</p>)}
+        {description &&
+          description
+            .split("\n")
+            .map((line, index) => <p key={index}>{line}</p>)}
+        <p>
+          {" "}
+          <span className="bold">target:</span> {target}
+        </p>{" "}
+        {/* Added Target information */}
+        <p>
+          <span className="bold">Signatures:</span> {current_signatures} /{" "}
+          {signature_goal || "Unlimited"}
+        </p>{" "}
+        {/* Display Signatures */}
+        <p>
+          {" "}
+          <span className="bold">Status:</span> {status}
+        </p>{" "}
+        {/* Display Petition Status */}
+        <p>
+          {" "}
+          <span className="bold">Created:</span>{" "}
+          {new Date(created_date).toLocaleDateString()}
+        </p>{" "}
+        {/* Nicely formatted date */}
       </div>
       <div className="LiteralArtElementIcons">
         {isHeartClicked ? (
@@ -53,16 +89,34 @@ export default function LiteralArtEl() {
             <span>Comments</span>
             <FaTimes onClick={() => setShowComments(false)} fill="red" />
           </div>
-          {comments.length > 0 ? (
+          {signatures && signatures.length > 0 ? ( // Use signatures array for comments
             <ul className="CommentList">
-              {comments.map((comment) => (
-                <li key={comment.id}>
-                  <b>{comment.author}:</b> {comment.text}
-                </li>
-              ))}
+              {signatures.map(
+                (
+                  signature,
+                  index // Map through signatures
+                ) => (
+                  <li key={index}>
+                    {" "}
+                    {/* Key by index since signatures might not have IDs */}
+                    <b>{signature.name}:</b>{" "}
+                    {signature.comment || "No comment provided."}{" "}
+                    {/* Display signature comment or default message */}
+                    <span
+                      style={{
+                        fontSize: "smaller",
+                        opacity: 0.7,
+                        marginLeft: "10px",
+                      }}
+                    >
+                      ({new Date(signature.signed_date).toLocaleDateString()})
+                    </span>
+                  </li>
+                )
+              )}
             </ul>
           ) : (
-            <p className="NoComments">No comments yet.</p>
+            <p className="NoComments">No signatures yet.</p>
           )}
         </div>
       )}

@@ -30,33 +30,59 @@ export default function Topbar() {
       <div className={`topCenter ${menuOpen ? "active" : ""}`}>
         <ul className="topList">
           <li className="topListItem">
-            <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
+            <Link to="/" onClick={() => setMenuOpen(false)}>
+              Home
+            </Link>
           </li>
-          
+
           <li className="topListItem">
-            Categories
+            Campaign
             <ul className="topbarSubCategories">
-              <li><Link to="/visual-art" onClick={() => setMenuOpen(false)}>Visual Arts</Link></li>
-              <li><Link to="/literature" onClick={() => setMenuOpen(false)}>Literary Arts</Link></li>
-              <li><Link to="/digital-media" onClick={() => setMenuOpen(false)}>Digital Media</Link></li>
-              <li><Link to="/performing-art" onClick={() => setMenuOpen(false)}>Performing Arts</Link></li>
+              <li>
+                <Link to="/visual-art" onClick={() => setMenuOpen(false)}>
+                  Environmental
+                </Link>
+              </li>
+              <li>
+                <Link to="/literature" onClick={() => setMenuOpen(false)}>
+                  Petitions
+                </Link>
+              </li>
+              <li>
+                <Link to="/digital-media" onClick={() => setMenuOpen(false)}>
+                  Digital Campaigns
+                </Link>
+              </li>
+              <li>
+                <Link to="/performing-art" onClick={() => setMenuOpen(false)}>
+                  Human rights
+                </Link>
+              </li>
             </ul>
           </li>
 
           <li className="topListItem">
-            <Link to="/crowdfund" onClick={() => setMenuOpen(false)}>Crowdfunding</Link>
+            <Link to="/crowdfund" onClick={() => setMenuOpen(false)}>
+              Crowdfunding
+            </Link>
           </li>
           <li className="topListItem">
-            <Link to="/livestream" onClick={() => setMenuOpen(false)}>Live Stream</Link>
+            <Link to="/livestream" onClick={() => setMenuOpen(false)}>
+              Live Stream
+            </Link>
           </li>
 
           {isAuthenticated && (
             <>
               <li className="topListItem">
-                <Link to="/profile" onClick={() => setMenuOpen(false)}>Profile</Link>
+                <Link to="/profile" onClick={() => setMenuOpen(false)}>
+                  Profile
+                </Link>
               </li>
               <li className="topListItem">
-                <Link to="/map" onClick={() => setMenuOpen(false)}>Find Artists Near Me</Link>
+                <Link to="/map" onClick={() => setMenuOpen(false)}>
+                  Find Activist Near Me
+                </Link>
               </li>
             </>
           )}
@@ -66,7 +92,9 @@ export default function Topbar() {
       <div className="topRight">
         {isAuthenticated ? (
           <>
-            <span className="topbarUser">Welcome {user?.email?.split("@")[0]} !!</span>
+            <span className="topbarUser">
+              Welcome {user?.email?.split("@")[0]} !!
+            </span>
             <button className="topbarButton" onClick={handleLogout}>
               LogOut
             </button>

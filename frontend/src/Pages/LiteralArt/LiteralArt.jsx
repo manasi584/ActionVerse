@@ -9,7 +9,7 @@ export default function LiteralArt() {
   const { literalList } = useLiteral();
   return (
     <div className="LiteralArt">
-      <Topbar/>
+      <Topbar />
       <h1 className="LiteralArtHeading">Literary Art</h1>
       <div className="LiteralArtLists">
         {literalList.map((piece) => (
@@ -27,14 +27,14 @@ export default function LiteralArt() {
               <div className="LiteralArtListsElemenetsText">
                 <h3 className="LiteralArtListsElemenetsTitle">{piece.title}</h3>
                 <p className="LiteralArtListsElemenetsAuthor">
-                  By: {piece.author}
+                  By: {piece.creator}
                 </p>
               </div>
             </div>
           </Link>
         ))}
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
