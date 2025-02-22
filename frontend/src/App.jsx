@@ -10,18 +10,21 @@ import Livestream from "./Pages/Livestream/Livestream.jsx";
 import LivestreamStart from "./Pages/StartLive/LivestreamStart.jsx";
 import CrowdfundingPage from "./Pages/Crowdfunding/CrowdfundingPage.jsx";
 import { LiteralProvider } from "./Context/LiteralContext.jsx";
-import LiteralArtElement from "/src/Pages/LiteralArtElement/LiteralArtElement.jsx";
-
-
 
 // Lazy loading for better performance
 const Home = lazy(() => import("./Pages/Home/Home.jsx"));
-const DigitalMediaHub = lazy(() => import("./Pages/DigitalMedia/DigitalMedia.jsx")); 
+const DigitalMediaHub = lazy(() =>
+  import("./Pages/DigitalMedia/DigitalMedia.jsx")
+);
 
 // **Reused Components**
 const Petitions = lazy(() => import("./Pages/LiteralArt/LiteralArt.jsx")); // Literature now points to Petitions
-const EnvironmentalCampaigns = lazy(() => import("./Pages/VisulalArt/VisualArt.jsx")); // Visual Art now points to Environmental
-const HumanRightsCampaigns = lazy(() => import("./Pages/PerformingArt/PerformingArtsFeed.jsx")); // Performing Arts now points to Human Rights
+const EnvironmentalCampaigns = lazy(() =>
+  import("./Pages/VisulalArt/VisualArt.jsx")
+); // Visual Art now points to Environmental
+const HumanRightsCampaigns = lazy(() =>
+  import("./Pages/PerformingArt/PerformingArtsFeed.jsx")
+); // Performing Arts now points to Human Rights
 
 // Campaign Launchpad remains the same
 // const CampaignLaunchpad = lazy(() => import("./Pages/CampaignLaunchpad/CampaignLaunchpad.jsx"));
@@ -39,12 +42,6 @@ function App() {
           <Route path="/start-live" element={<LivestreamStart />} />
           <Route path="/crowdfund" element={<CrowdfundingPage />} />
 
-          {/* **Wrap LiteralArtElement inside LiteralProvider** */}
-
-
-          <Route path="/petitions/:id" element={<LiteralProvider><LiteralArtElement /></LiteralProvider>} />
-
-
           {/* **Wrap Petitions inside LiteralProvider** */}
           <Route
             path="/petitions"
@@ -56,9 +53,18 @@ function App() {
           />
 
           {/* Live Campaigns */}
-          <Route path="/live-campaigns/environmental" element={<EnvironmentalCampaigns />} />
-          <Route path="/live-campaigns/digital-media-hub" element={<DigitalMediaHub />} />
-          <Route path="/live-campaigns/human-rights" element={<HumanRightsCampaigns />} />
+          <Route
+            path="/live-campaigns/environmental"
+            element={<EnvironmentalCampaigns />}
+          />
+          <Route
+            path="/live-campaigns/digital-media-hub"
+            element={<DigitalMediaHub />}
+          />
+          <Route
+            path="/live-campaigns/human-rights"
+            element={<HumanRightsCampaigns />}
+          />
 
           {/* Other Campaign Pages */}
           {/*<Route path="/campaign-launchpad" element={<CampaignLaunchpad />} />*/}
