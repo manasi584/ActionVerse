@@ -206,3 +206,50 @@
     color: greenyellow; /* Light green on hover */
   }
 }
+
+.topbarSubCategories {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px;
+  min-width: 200px;
+  display: none;
+  z-index: 10;
+}
+
+.campaignDropdown:hover .topbarSubCategories {
+  display: block;
+}
+
+.nestedDropdown {
+  position: relative;
+}
+
+.nestedDropdownMenu {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px;
+  min-width: 200px;
+  display: none;
+}
+
+.nestedDropdown:hover .nestedDropdownMenu {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+

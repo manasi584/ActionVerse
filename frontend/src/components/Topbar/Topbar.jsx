@@ -8,6 +8,7 @@ export default function Topbar() {
   const { isAuthenticated, user, logout } = useAuth();
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [liveCampaignsOpen, setLiveCampaignsOpen] = useState(false); // For nested dropdown
 
   function handleLogout(e) {
     e.preventDefault();
@@ -35,27 +36,51 @@ export default function Topbar() {
             </Link>
           </li>
 
-          <li className="topListItem">
+          {/* Campaigns Dropdown */}
+          <li
+            className="topListItem campaignDropdown"
+            onMouseEnter={() => setLiveCampaignsOpen(true)}
+            onMouseLeave={() => setLiveCampaignsOpen(false)}
+          >
             Campaign
             <ul className="topbarSubCategories">
-              <li>
-                <Link to="/visual-art" onClick={() => setMenuOpen(false)}>
-                  Environmental
-                </Link>
+              {/* Live Campaigns (with nested options) */}
+              <li
+                className="nestedDropdown"
+                onMouseEnter={() => setLiveCampaignsOpen(true)}
+                onMouseLeave={() => setLiveCampaignsOpen(false)}
+              >
+                Live Campaigns ▾
+                {liveCampaignsOpen && (
+                  <ul className="nestedDropdownMenu">
+                    <li>
+                      <Link to="/live-campaigns/environmental" onClick={() => setMenuOpen(false)}>
+                        Environmental
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/live-campaigns/digital-media-hub" onClick={() => setMenuOpen(false)}>
+                        Digital Media Hub
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/live-campaigns/human-rights" onClick={() => setMenuOpen(false)}>
+                        Human Rights
+                      </Link>
+                    </li>
+                  </ul>
+                )}
               </li>
+
+              {/* Other Campaign options */}
               <li>
-                <Link to="/literature" onClick={() => setMenuOpen(false)}>
+                <Link to="/petitions" onClick={() => setMenuOpen(false)}>
                   Petitions
                 </Link>
               </li>
               <li>
-                <Link to="/digital-media" onClick={() => setMenuOpen(false)}>
-                  Digital Campaigns
-                </Link>
-              </li>
-              <li>
-                <Link to="/performing-art" onClick={() => setMenuOpen(false)}>
-                  Human rights
+                <Link to="/campaign-launchpad" onClick={() => setMenuOpen(false)}>
+                  Campaign Launchpad
                 </Link>
               </li>
             </ul>
