@@ -13,6 +13,13 @@ const UserProfile = () => {
     "/activists3.jpg",
   ]);
 
+  const [campaigns, setCampaigns] = useState([
+    { title: "Save the Rainforests", link: "/campaigns/rainforests" },
+    { title: "Clean Water for All", link: "/campaigns/clean-water" },
+    { title: "Stop Plastic Pollution", link: "/campaigns/plastic-pollution" },
+    { title: "Education for Every Child", link: "/campaigns/education" },
+  ]);
+
   const [profileImage, setProfileImage] = useState("/profile.jpg");
   const [username, setUsername] = useState("@aasha");
   const [bio, setBio] = useState(" Digital Activist | Impact Creator | Open for collaborations");
@@ -82,8 +89,24 @@ const UserProfile = () => {
           </button>
           <input type="file" id="fileUpload" hidden onChange={handleFileUpload} />
           <label htmlFor="fileUpload" className="upload-btn">📤 Upload Work</label>
-          <Link to="/start-live" className="live-btn">🎥 Start Live</Link>
+          <Link to="/start-live" className="live-btn">📢 Start Live Activism</Link>
         </div>
+
+         {/* Impact Stories / Campaigns */}
+         <div className="campaign-list">
+          <h3 className="campaign-header">📢 Impact Stories & Campaigns</h3>
+          <ul>
+            {campaigns.map((campaign, index) => (
+              <li key={index}>
+                <Link to={campaign.link} className="campaign-link">
+                  {campaign.title} →
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+   
+   
 
         {/* Posts Grid */}
         <div className="posts-grid">
@@ -92,6 +115,7 @@ const UserProfile = () => {
           ))}
         </div>
       </div>
+
       <Footer />
     </>
   );

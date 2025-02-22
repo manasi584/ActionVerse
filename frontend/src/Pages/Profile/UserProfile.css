@@ -166,3 +166,43 @@
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
 }
+
+
+
+.campaign-list {
+  margin: 30px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.campaign-header {
+  font-size: 1.5rem;
+  color: #d9534f;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.campaign-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.campaign-list li {
+  margin: 10px 0;
+}
+
+.campaign-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0275d8;
+  transition: all 0.3s ease-in-out;
+}
+
+.campaign-link:hover {
+  color: #d9534f;
+  text-decoration: underline;
+}
