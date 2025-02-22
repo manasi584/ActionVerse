@@ -11,7 +11,11 @@
 .top {
   width: 100%;
   height: 65px;
-  background: linear-gradient(90deg, #0b6623, #33a852); /* Deep Green to Light Green */
+  background: linear-gradient(
+    90deg,
+    #0b6623,
+    #33a852
+  ); /* Deep Green to Light Green */
   position: sticky;
   top: 0;
   left: 0;
@@ -69,7 +73,7 @@
 }
 
 .topListItem:hover a {
-  color: #b0e57c; /* Light green on hover */
+  color: var(--primary-color); /* Light green on hover */
 }
 
 /* 📂 Dropdown Menu */
@@ -167,16 +171,20 @@
     background-color: transparent;
     box-shadow: none;
     padding: 0;
+    color: white;
   }
 
-  .topbarSubCategories li a {
-    color: white;
+  .topListItem:hover a {
+    color: greenyellow; /* Light green on hover */
   }
 }
 
 @media (max-width: 768px) {
   .topbarButton {
     padding: 8px 15px;
+  }
+  .topListItem:hover a {
+    color: greenyellow; /* Light green on hover */
   }
 }
 
@@ -194,13 +202,7 @@
     font-size: 14px;
     padding: 8px 12px;
   }
+  .topListItem:hover a {
+    color: greenyellow; /* Light green on hover */
+  }
 }
-
-
-
-
-
-
-
-
-

@@ -7,44 +7,41 @@ import user4 from "/user4.jpg";
 import user5 from "/user5.jpg";
 import user6 from "/user6.jpg";
 
-
-
-
 export const testimonials = [
   {
     user: "Aisha Khan",
     organization: "Climate Action Now",
-    image: user1, 
+    image: user1,
     text: "ActionVerse connected us with volunteers and donors we wouldn't have reached otherwise.  It's a game-changer for our climate advocacy efforts.",
   },
   {
     user: "Raj Patel",
     organization: "Community Food Bank",
-    image: user2, 
+    image: user2,
     text: "The crowdfunding feature on ActionVerse helped us raise funds for essential supplies during a crisis.  The transparent donation system built trust with our supporters.",
   },
   {
     user: "Maria Rodriguez",
     organization: "Human Rights Watch",
-    image: user3, 
+    image: user3,
     text: "ActionVerse's secure communication tools were crucial for organizing our campaign. The real-time map kept our team coordinated and informed.",
   },
   {
     user: "David Lee",
     organization: "Local Environmental Group",
-    image: user4, 
+    image: user4,
     text: "The AI-driven insights helped us target our messaging and reach a wider audience. ActionVerse is essential for effective activism.",
   },
   {
     user: "Sarah Chen",
     organization: "Education Reform Initiative",
-    image: user5, 
+    image: user5,
     text: "ActionVerse made it easy to connect with other organizations and collaborate on joint projects.  It's strengthened our collective impact.",
   },
   {
     user: "Juan Garcia",
     organization: "Social Justice Collective",
-    image: user6, 
+    image: user6,
     text: "The live streaming feature on ActionVerse allowed us to engage with our supporters in real-time.  It's a powerful tool for building community.",
   },
 ];
@@ -87,7 +84,6 @@ export const features = [
       "Businesses and individuals can hire artists for performances, mural painting, or music gigs directly from the platform.",
   },
 ];
-
 
 export const checklistItems = [
   {
@@ -144,8 +140,6 @@ export const pricingOptions = [
     ],
   },
 ];
-
-
 
 export const resourcesLinks = [
   { href: "#", text: "How ActionVerse Works" },
@@ -380,51 +374,54 @@ export const digitalMediaWorks = [
     artist: "Ravi Verma",
     profilePic: "https://randomuser.me/api/portraits/men/32.jpg",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4-WR058NNaiZcimL5YHvpAmaxEiwWcVQQ4w&s",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlHM0iIZ6xTZ9upGROZd6i7hIg2xLe3sD8BV5oPbZi_rHFI-Naa5-tJdjf2LzNoIBrBGU&usqp=CAU",
     description:
-      "A futuristic digital artwork blending Indian culture with modern design.",
+      "Visual campaign for women's equal rights, highlighting societal disparities.",
   },
   {
     id: 2,
     artist: "Aisha Kapoor",
     profilePic: "https://randomuser.me/api/portraits/women/44.jpg",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsLhKIw06xj-sxg4BvaPamJtBofrwnt_dQ4Q&s",
-    description: "A mesmerizing glitch art composition full of vibrant colors.",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuavoHs1vlDnkqFo-iGiZiaw-c64Qgp3wrWg&s",
+    description:
+      "Digital artwork supporting the #MeToo movement, amplifying survivor voices.",
   },
   {
     id: 3,
     artist: "Arjun Sharma",
     profilePic: "https://randomuser.me/api/portraits/men/51.jpg",
     image:
-      "https://www.creativefabrica.com/wp-content/uploads/2022/12/17/John-Constables-Hyper-Realistic-Cyberpunk-City-Skyline-Supernova-52995106-1.png",
-    description: "A hyper-detailed 3D render of a cyberpunk cityscape.",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7Jx7K42y4rIUZVxrsEbHJsEnq61CpbDWSuA&s",
+    description:
+      "Digital art reflecting the urgency and impact of the Black Lives Matter movement.",
   },
   {
     id: 4,
     artist: "Meera Singh",
     profilePic: "https://randomuser.me/api/portraits/women/36.jpg",
     image:
-      "https://images.stockcake.com/public/e/4/2/e42dcf80-aa19-4e30-919b-a2df494f745b_large/neon-future-portrait-stockcake.jpg",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGxlvfnlKVhOK60qBoE6H3xfnayUYJdGlbew&s",
     description:
-      "A neon-lit digital portrait inspired by cyberpunk aesthetics.",
+      "Futuristic digital portrait exploring themes of technology and identity.",
   },
   {
     id: 5,
     artist: "Vikram Das",
     profilePic: "https://randomuser.me/api/portraits/men/29.jpg",
     image:
-      "https://easy-peasy.ai/cdn-cgi/image/quality=80,format=auto,width=700/https://media.easy-peasy.ai/982d6296-7178-4d1d-877d-0e04eb41cf17/14db1644-9ca7-4568-a9ae-519f9687b739.png",
+      "https://img.freepik.com/premium-photo/digital-india-map-with-india-flag_1203803-853.jpg?ga=GA1.1.69946619.1719594377&semt=ais_hybrid",
     description:
-      "An AI-generated surreal artwork featuring dreamlike landscapes.",
+      "Digital representation of caste inequality in India, sparking social dialogue.",
   },
   {
     id: 6,
     artist: "Priya Nair",
     profilePic: "https://randomuser.me/api/portraits/women/48.jpg",
     image:
-      "https://images.fineartamerica.com/images-medium-large-5/portals-to-alternate-universes-artwork-science-photo-library.jpg",
-    description: "A digital painting depicting an alternate sci-fi universe.",
+      "https://img.freepik.com/premium-photo/independence-day-celebration-indian-woman-displaying-smartphone-with-blank-screen_1257902-1294.jpg?ga=GA1.1.69946619.1719594377&semt=ais_hybrid",
+    description:
+      "Visual campaign highlighting the transformative power of Digital India.",
   },
   {
     id: 7,
@@ -432,32 +429,35 @@ export const digitalMediaWorks = [
     profilePic: "https://randomuser.me/api/portraits/men/40.jpg",
     image:
       "https://thumbs.dreamstime.com/b/captivating-wavy-blue-abstract-visualization-depicting-technology-data-elements-featuring-luminous-lines-dynamic-flowing-343026305.jpg",
-    description: "A vibrant motion graphic design capturing digital fluidity.",
+    description:
+      "Abstract digital art exploring the dynamic flow of data and technology.",
   },
   {
     id: 8,
     artist: "Ananya Joshi",
     profilePic: "https://randomuser.me/api/portraits/women/52.jpg",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWl3N5Rx9qsR2QdsUQvgnFXKLAF0sYaErdCA&s",
-    description: "An animated digital painting representing abstract emotions.",
+      "https://img.freepik.com/premium-photo/world-development-information-day-image_1198884-23244.jpg?ga=GA1.1.69946619.1719594377&semt=ais_hybrid",
+    description:
+      "Digital artwork showcasing the integration of technology in agriculture.",
   },
   {
     id: 9,
     artist: "Rajesh Iyer",
     profilePic: "https://randomuser.me/api/portraits/men/34.jpg",
     image:
-      "https://img.freepik.com/premium-vector/eclectic-collage-art-expression-elements-creative-projects_1322206-105550.jpg",
+      "https://img.freepik.com/premium-photo/indian-work-education_917664-124179.jpg?ga=GA1.1.69946619.1719594377&semt=ais_hybrid",
     description:
-      "A digital collage blending AI-generated textures with human creativity.",
+      "Visual story of digital education initiatives in rural Indian communities.",
   },
   {
     id: 10,
     artist: "Sanya Patel",
     profilePic: "https://randomuser.me/api/portraits/women/39.jpg",
     image:
-      "https://99designs-blog.imgix.net/blog/wp-content/uploads/2022/06/Dystopia-in-design.jpg?auto=format&q=60&w=1860&h=1090&fit=crop&crop=faces",
-    description: "A concept art piece visualizing a dystopian future.",
+      "https://img.freepik.com/free-photo/front-view-people-celebrating-indian-republic-day_23-2150901270.jpg?ga=GA1.1.69946619.1719594377&semt=ais_hybrid",
+    description:
+      "Digital campaign promoting voter participation and civic engagement.",
   },
   {
     id: 11,
@@ -466,7 +466,7 @@ export const digitalMediaWorks = [
     image:
       "https://creator.nightcafe.studio/jobs/0OIJT3VCV38I7LTx2toV/0OIJT3VCV38I7LTx2toV.jpg",
     description:
-      "A photorealistic digital painting of a futuristic metropolis.",
+      "Hyperrealistic digital painting of a sprawling, advanced future city.",
   },
   {
     id: 12,
@@ -474,7 +474,8 @@ export const digitalMediaWorks = [
     profilePic: "https://randomuser.me/api/portraits/women/31.jpg",
     image:
       "https://t4.ftcdn.net/jpg/10/81/68/67/360_F_1081686798_GXDeLJ9neswLk2o1ffOIhTvG8wxtWKWE.jpg",
-    description: "A digital mixed-media artwork inspired by Indian folklore.",
+    description:
+      "Digital artwork fusing traditional Indian narratives with modern techniques.",
   },
   {
     id: 13,
@@ -482,7 +483,8 @@ export const digitalMediaWorks = [
     profilePic: "https://randomuser.me/api/portraits/men/50.jpg",
     image:
       "https://images.squarespace-cdn.com/content/v1/5c77350965a707ed1710a1bc/1592324984483-YGAI488E2HV60HX424FZ/Generative+Art+by+Manolo+Gamboa+Naon.jpeg?format=500w",
-    description: "An interactive generative art piece created using code.",
+    description:
+      "Code-driven generative art, creating dynamic and evolving visual patterns.",
   },
   {
     id: 14,
@@ -491,7 +493,7 @@ export const digitalMediaWorks = [
     image:
       "https://cdn.dribbble.com/users/2624753/screenshots/14131393/media/4297b40bf342e3543bbfd09fb9fb4d85.png?format=webp&resize=400x300&vertical=center",
     description:
-      "A motion poster blending typography and digital illustration.",
+      "Dynamic motion poster combining striking typography with digital artistry.",
   },
   {
     id: 15,
