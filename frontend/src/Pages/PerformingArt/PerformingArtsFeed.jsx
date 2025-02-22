@@ -2,29 +2,27 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Modal, Nav } from "react-bootstrap";
 import Topbar from "../../components/Topbar/Topbar";
-import Footer from "../../components/Footer/Footer"
-import {sampleVideos} from "../../Context/PerformingArtContext"
-
-
+import Footer from "../../components/Footer/Footer";
+import { sampleVideos } from "../../Context/PerformingArtContext";
 
 const PerformingArtsFeed = () => {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
   return (
     <>
-      <Topbar/>
+      <Topbar />
       <div
         className="container py-4"
         style={{
           fontFamily: "Poppins, sans-serif",
-          background: "linear-gradient(135deg, #ff7e5f, #ff3f3f)",
+          background: "linear-gradient(135deg,rgb(0, 48, 4),rgb(2, 155, 7))",
           borderRadius: "10px",
           padding: "20px",
-          marginTop:"20px"
+          marginTop: "20px",
         }}
       >
         <h2 className="text-center text-white mb-4">
-         Human Rights , a world for all !
+          Human Rights , a world for all !
         </h2>
         <div className="row">
           {sampleVideos.map((video) => (
