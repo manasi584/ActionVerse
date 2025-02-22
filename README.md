@@ -34,17 +34,6 @@ ActionVerse is a digital platform designed to empower activists, grassroots move
 
 ---
 
-## 🛠️ Tech Stack
-- **Frontend:** React.js, Next.js, Tailwind CSS
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB / PostgreSQL
-- **Authentication:** Firebase Authentication
-- **Storage:** Firebase Firestore, Cloudinary (for media)
-- **Notifications:** Firebase Cloud Messaging / Twilio
-- **Security:** End-to-End Encryption, OAuth2.0
-
----
-
 ## 📈 Future Scope
 - **Decentralized Governance Tools** : Extending our secure platform, we envision integrated DAO tools, empowering movements to make collective decisions on funding, strategy, and platform governance.
 - **Advanced Campaign Analytics** : Building on our Campaign Launchpad, we'll provide in-depth analytics to track campaign reach, engagement, and impact, enabling data-driven activism.
