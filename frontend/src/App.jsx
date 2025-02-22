@@ -10,6 +10,8 @@ import Livestream from "./Pages/Livestream/Livestream.jsx";
 import LivestreamStart from "./Pages/StartLive/LivestreamStart.jsx";
 import CrowdfundingPage from "./Pages/Crowdfunding/CrowdfundingPage.jsx";
 import { LiteralProvider } from "./Context/LiteralContext.jsx";
+import LiteralArtElement from "/src/Pages/LiteralArtElement/LiteralArtElement.jsx";
+
 
 
 // Lazy loading for better performance
@@ -36,6 +38,12 @@ function App() {
           <Route path="/livestream" element={<Livestream />} />
           <Route path="/start-live" element={<LivestreamStart />} />
           <Route path="/crowdfund" element={<CrowdfundingPage />} />
+
+          {/* **Wrap LiteralArtElement inside LiteralProvider** */}
+
+
+          <Route path="/petitions/:id" element={<LiteralProvider><LiteralArtElement /></LiteralProvider>} />
+
 
           {/* **Wrap Petitions inside LiteralProvider** */}
           <Route

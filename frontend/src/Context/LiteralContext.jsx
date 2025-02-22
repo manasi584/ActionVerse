@@ -282,82 +282,57 @@ const literaryPiecesData = [
   },
 ];
 const LiteralContext = createContext();
+
 const initialState = {
   literalList: literaryPiecesData,
   isLoading: false,
-  currLiteral: {},
+  currLiteral: null,
   error: "",
 };
+
 function reducer(state, action) {
   switch (action.type) {
     case "loading":
-      return {
-        ...state,
-        isLoading: true,
-      };
-    //    loading complete list
+      return { ...state, isLoading: true };
+      
     case "literalList/loaded":
-      return {
-        ...state,
-        isLoading: false,
-        literalList: action.payload,
-      };
-    //    for loading a single poem
+      return { ...state, isLoading: false, literalList: action.payload };
+      
     case "literal/loaded":
-      return {
-        ...state,
-        isLoading: false,
-        currLiteral: action.payload,
-      };
+      return { ...state, isLoading: false, currLiteral: action.payload };
+      
     case "literalList/created":
-      return {
-        ...state,
-        isLoading: false,
-        literalList: [...state.literalList, action.payload],
-        currLiteral: action.payload,
-      };
+      return { ...state, isLoading: false, literalList: [...state.literalList, action.payload], currLiteral: action.payload };
+      
     case "rejected":
-      return {
-        ...state,
-        isLoading: false,
-        error: action.payload,
-      };
+      return { ...state, isLoading: false, error: action.payload };
+      
     default:
-      throw new Error("Unknown error type");
+      throw new Error("Unknown action type");
   }
 }
 
 function LiteralProvider({ children }) {
-  const [{ literalList, isLoading, currLiteral, error }, dispatch] = useReducer(
-    reducer,
-    initialState
-  );
+  const [{ literalList, isLoading, currLiteral, error }, dispatch] = useReducer(reducer, initialState);
 
-  //   get a literal
+  //  Fixed `getLiteral` function  
   const getLiteral = useCallback(
-    function getLiteral(id) {
-      // if (currLiteral && Number(id) === currLiteral.id) return;
-
+    (id) => {
       dispatch({ type: "loading" });
-      const selectedLiteral = literalList.find((piece) => piece.id === id);
 
+      const selectedLiteral = literalList.find((piece) => piece.id === id);
       if (selectedLiteral) {
         dispatch({ type: "literal/loaded", payload: selectedLiteral });
-      } else
-        dispatch({
-          type: "rejected",
-          payload: "There is some error in loading the data... ",
-        });
+      } else {
+        dispatch({ type: "rejected", payload: "Error: Could not find the selected Literal Art..." });
+      }
     },
-    [currLiteral.id]
+    [literalList] //  Correct dependency
   );
 
   function createLiteral(newLiteral) {
-    if (!newLiteral.title || !newLiteral.content || !newLiteral.imageUrl) {
-      dispatch({
-        type: "rejected",
-        payload: "There is some error in creating the data... ",
-      });
+    if (!newLiteral.title || !newLiteral.description || !newLiteral.imageUrl) {
+      dispatch({ type: "rejected", payload: "Error: Missing fields in the new entry." });
       return;
     }
     const newId = literalList.length + 1;
@@ -367,25 +342,16 @@ function LiteralProvider({ children }) {
   }
 
   return (
-    <LiteralContext.Provider
-      value={{
-        literalList,
-        isLoading,
-        currLiteral,
-        getLiteral,
-        error,
-        createLiteral,
-        // DeleteLiteral,
-      }}
-    >
+    <LiteralContext.Provider value={{ literalList, isLoading, currLiteral, getLiteral, error, createLiteral }}>
       {children}
     </LiteralContext.Provider>
   );
 }
+
 function useLiteral() {
   const context = useContext(LiteralContext);
-  if (!context)
-    throw new Error("Literal Context used outside the literalProvider ");
+  if (!context) throw new Error("LiteralContext must be used within a LiteralProvider.");
   return context;
 }
+
 export { LiteralProvider, useLiteral };

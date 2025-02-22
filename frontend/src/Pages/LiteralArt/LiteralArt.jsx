@@ -14,7 +14,7 @@ export default function LiteralArt() {
       <div className="LiteralArtLists">
         {literalList.map((piece) => (
           <Link
-            to={`${piece.id}`}
+            to={`/petitions/${piece.id}`}
             key={piece.id}
             className="LiteralArtListsElemenets"
           >
