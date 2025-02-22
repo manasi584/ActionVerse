@@ -24,7 +24,7 @@ const PerformingArtsFeed = () => {
         }}
       >
         <h2 className="text-center text-white mb-4">
-         Performing Arts Corner
+         Human Rights , a world for all !
         </h2>
         <div className="row">
           {sampleVideos.map((video) => (

@@ -10,7 +10,7 @@ const DigitalMedia = () => {
       <Topbar />
       <div className="digitalMedia">
         <h1 className="pageTitle">Digital Media Hub 🎬</h1>
-        <p className="subText">A showcase of Indian digital creators</p>
+        <p className="subText">A Creative Hub for Social Change.</p>
 
         <div className="mediaGallery">
           {digitalMediaWorks.map((media) => (
