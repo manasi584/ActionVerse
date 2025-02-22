@@ -1,0 +1,19 @@
+.campaign-launch-container {
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto; /* Center the content */
+  padding: 20px;
+}
+
+.campaign-launch-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color); /* Use your primary color */
+}
+
+.campaign-launch-content {
+  display: flex;
+  flex-direction: column; /* Stack form and list */
+  gap: 30px; /* Space between form and list */
+}
+
+/* Optional: Add styles for Topbar if needed */

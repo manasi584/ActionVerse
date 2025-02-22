@@ -1,0 +1,76 @@
+.campaign-list-container {
+  padding: 20px;
+  /* background-color: (secondary-color); */
+}
+
+.campaign-list-container h2 {
+  color: var(--primary-color);
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.campaign-list-container > div {
+  /* Style for the container of the mapped campaign items */
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px; /* Space between grid items */
+}
+
+.campaign-item {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 0; /* Remove margin from individual items */
+  padding: 15px;
+  border-radius: 8px;
+  background: var(--primary-color);
+  color: #f0f0f0; /* Light gray/off-white */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.campaign-item h3 {
+  margin-top: 0;
+  color: rgb(229, 252, 195);
+  font-size: 1.2em;
+  margin-bottom: 8px;
+}
+
+.campaign-item p {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.share-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.share-button:hover {
+  background-color: #4caf50;
+  transform: translateY(-2px);
+}
+
+.share-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.share-button {
+  background-color: #ffc107; /* A gold/yellow accent */
+  color: #000; /* Black text for contrast */
+  /* ... rest of your button styles ... */
+}
+
+.share-button:hover {
+  background-color: #ffd54f; /* Lighter on hover */
+  transform: translateY(-2px);
+}

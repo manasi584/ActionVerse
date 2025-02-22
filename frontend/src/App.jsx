@@ -10,6 +10,7 @@ import Livestream from "./Pages/Livestream/Livestream.jsx";
 import LivestreamStart from "./Pages/StartLive/LivestreamStart.jsx";
 import CrowdfundingPage from "./Pages/Crowdfunding/CrowdfundingPage.jsx";
 import { LiteralProvider } from "./Context/LiteralContext.jsx";
+import CampaignLaunch from "./Pages/CampaignLaunch/CampaignLaunch.jsx";
 
 // Lazy loading for better performance
 const Home = lazy(() => import("./Pages/Home/Home.jsx"));
@@ -41,6 +42,7 @@ function App() {
           <Route path="/livestream" element={<Livestream />} />
           <Route path="/start-live" element={<LivestreamStart />} />
           <Route path="/crowdfund" element={<CrowdfundingPage />} />
+          <Route path="/campaign-launchpad" element={<CampaignLaunch />} />
 
           {/* **Wrap Petitions inside LiteralProvider** */}
           <Route
@@ -67,7 +69,7 @@ function App() {
           />
 
           {/* Other Campaign Pages */}
-          {/*<Route path="/campaign-launchpad" element={<CampaignLaunchpad />} />*/}
+          <Route path="/campaign-launchpad" element={<CampaignLaunch />} />
 
           {/* Catch-all for 404 pages */}
           <Route path="*" element={<NoPage />} />
